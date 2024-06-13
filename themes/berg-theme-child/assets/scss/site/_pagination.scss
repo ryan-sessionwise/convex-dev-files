@@ -1,0 +1,164 @@
+.bs-post-block---default {
+  &.bs-posts {
+    $this: ".bs-posts";
+    #{$this}__pagination {
+      margin: 33px 0 45px;
+      ul.pagination {
+        li {
+          width: auto;
+          margin: 5px;
+          border: 0;
+          > * {
+            line-height: 1.5;
+            border: 1px solid var(--peacock-blue-transparent);
+            border-radius: 5px;
+            &::before {
+              display: none;
+            }
+          }
+          &:hover,
+          &.active {
+            > * {
+              color: var(--pure-white);
+              background-color: var(--cerulean);
+              box-shadow: 0 2px 10px 0 rgba(0, 98, 169, 0.3);
+              &.dots {
+                &:hover {
+                  background-color: transparent;
+                  box-shadow: none;
+                }
+              }
+            }
+          }
+          &:first-of-type,
+          &:last-of-type {
+            border: 0;
+            > * {
+              border: transparent;
+              background-color: transparent;
+              box-shadow: none;
+              &::before {
+                @include after-before;
+                z-index: $z-index-one;
+                display: inline;
+                top: 15px;
+                right: 10px;
+                width: 18px;
+                height: 18px;
+                transition: all 0.3s ease-in-out;
+                border-right: 2px solid var(--cerulean);
+                border-top: 2px solid var(--cerulean);
+              }
+              &::before,
+              &::after {
+                &:hover {
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+          span,
+          a {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            padding: 20px 20px 17px;
+            color: var(--catalina-blue);
+
+            &::after {
+              display: none;
+            }
+            &.prev {
+              width: 18px;
+              border: 0;
+              font-size: 0;
+              &::before {
+                display: block;
+                transform: rotate(225deg);
+              }
+              &:hover {
+                &::before {
+                  background-color: transparent;
+                }
+              }
+            }
+            &.next {
+              border: 0;
+              font-size: 0;
+              &::before {
+                display: block;
+                top: 15px;
+                right: auto;
+                left: 12px;
+                transform: rotate(45deg);
+              }
+              &:hover {
+                border: 0;
+                &::before {
+                  border-color: var(--peacock-blue-transparent);
+                }
+              }
+            }
+            &.dots {
+              width: 5px;
+              padding: 5px 12px 0 12px;
+              border: 0;
+              color: var(--catalina-blue);
+              &:hover {
+                background-color: transparent;
+                box-shadow: none;
+              }
+            }
+            &.disabled {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .bs-post-block---default {
+    &.bs-posts {
+      $this: ".bs-posts";
+      #{$this}__pagination {
+        margin: 20px 0 0;
+        ul.pagination {
+          li {
+            margin: 5px;
+            > * {
+              font-size: $paragraph-sub-text;
+            }
+            &:first-of-type,
+            &:last-of-type {
+              > * {
+                font-size: $paragraph-sub-text;
+                &::before {
+                  width: 13px;
+                  height: 13px;
+                  top: 9px;
+                }
+              }
+            }
+            span,
+            a {
+              width: 30px;
+              height: 30px;
+              padding: 13px 12px 9px;
+              &::before {
+                width: 13px;
+                height: 13px;
+              }
+              &.next {
+                &::before {
+                  top: 9px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

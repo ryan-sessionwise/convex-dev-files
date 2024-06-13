@@ -1,0 +1,134 @@
+.bs-posts.bs-post-block---default {
+  .bs-posts__load-more {
+    .btn {
+      padding: 9px 20px 7px;
+      border-radius: 4px;
+      background-color: var(--orange-red);
+      font-size: $h6-font-size;
+      font-family: $font-avenir-demi;
+      color: var(--pure-white);
+      &:hover {
+        background-color: var(--orange-red-dark);
+      }
+    }
+  }
+  .bs-posts__filters {
+    .bs-posts__filters--fields {
+      .form-group {
+        label {
+          display: none;
+        }
+        > div {
+          border-color: transparent;
+          border-bottom: 1px var(--very-light-blue);
+          .search-box {
+            padding: 10px 50px 12px 40px;
+          }
+          &.input-wrapper {
+            &::before {
+              @include sprite-search-icon-big;
+              left: -2px;
+              border: none;
+            }
+            &::after {
+              border: none;
+            }
+            input,
+            ::placeholder {
+              color: var(--catalina-blue);
+            }
+          }
+
+          &.select-wrapper {
+            &::after {
+              top: -11px;
+              right: 11px;
+              border-width: 1px 1px 0 0;
+              border-color: var(--cerulean);
+            }
+            select {
+              visibility: hidden;
+              padding: 10px 50px 12px 10px;
+              color: var(--catalina-blue);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.bs-posts.bs-post-block---default .bs-post__learn-more,
+.bs-post__learn-more {
+  @extend %btn-primary-link-arrow-small;
+  padding: 0 19px 0 0;
+  &::after {
+    top: 2px;
+  }
+  .btn {
+    font-size: 14px !important; // override default post block values
+    color: var(--orange-red) !important; // override default post block values
+    &:hover {
+      opacity: 1 !important; // override default post block values
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bs-posts.bs-post-block---default {
+    padding-bottom: 15px;
+    .bs-posts__filters {
+      margin-bottom: 45px;
+      .bs-posts__filters--fields {
+        display: grid;
+        align-items: end;
+        grid-template-columns: 1fr 250px 250px;
+        column-gap: 30px;
+        .form-group {
+          width: 100%;
+          > div {
+            &.input-wrapper {
+              width: 370px;
+            }
+          }
+        }
+      }
+    }
+    .bs-posts {
+      &__pagination {
+        margin-top: 5px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bs-posts.bs-post-block---default {
+    padding-bottom: 85px;
+    .bs-posts__filters {
+      .bs-posts__filters--fields {
+        grid-template-columns: 1fr 270px 270px;
+      }
+    }
+    .bs-posts {
+      &__normal {
+        padding-bottom: 4px;
+      }
+      &__pagination {
+        margin-top: 22px;
+      }
+    }
+  }
+  .mt-4-5 {
+    margin-top: 2.2rem;
+  }
+}
+
+.wp-block[data-type="e25m/post-block"] {
+  .bs-posts__filters
+    .bs-posts__filters--fields
+    .form-group
+    > div.select-wrapper
+    select {
+    visibility: visible;
+  }
+}

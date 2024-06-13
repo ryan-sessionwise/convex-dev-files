@@ -1,0 +1,15 @@
+.bs-pro-button--btn-primary {
+	&.bs-pro-button {
+		a.bs-pro-button__container {
+			@extend %btn-primary;
+			box-shadow: 0 4px 10px 0 rgba(var(--orange-red), 0.3);
+			&:hover,
+			&:focus,
+			&:active,
+			&:not(:disabled):not(.disabled):active,
+			&:not(:disabled):not(.disabled):active:focus {
+				box-shadow: 0 4px 10px 0 rgba(var(--orange-red-dark), 0.3);
+			}
+		}
+	}
+}

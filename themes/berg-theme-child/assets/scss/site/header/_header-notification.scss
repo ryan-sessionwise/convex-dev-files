@@ -1,0 +1,30 @@
+.mtsnb {
+  font-family: $font-avenir-demi;
+  .mtsnb-container {
+    padding: 8px 40px 6px;
+  }
+  .mtsnb-button {
+    padding: 3px 9px;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+  .mtsnb-hide{
+    right: 18px;
+  }
+  .mtsnb-divider{
+    opacity: .2;
+    padding: 0px 9px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .mtsnb {
+    .mtsnb-text {
+      font-size: 14px;
+    }
+    .mtsnb-button {
+      padding: 5px 9px 4px;
+      font-size: 12px;
+    }
+  }
+}

@@ -1,0 +1,171 @@
+.fancybox-container {
+  .fancybox-slide {
+    .fancybox-content {
+      height: 495px;
+      border-radius: 5px;
+      background: transparent;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .fancybox-container {
+    .fancybox-slide {
+      .fancybox-content {
+        height: 80%;
+      }
+    }
+  }
+}
+@include media-breakpoint-only(md) {
+  .fancybox-container {
+    .fancybox-slide {
+      .fancybox-content {
+        height: 40%;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(xs) {
+  .fancybox-container {
+    .fancybox-slide {
+      padding: 0;
+      .fancybox-content {
+        height: 30%;
+      }
+    }
+  }
+}
+
+// *** ---- Leadership popup *** ---- //
+.page-leadership,
+.page-leadership-team {
+  .fancybox-container {
+    .fancybox-slide {
+      .fancybox-content {
+        height: 80%;
+        background: var(--pure-white);
+        .bs-post {
+          display: grid;
+          grid-template-columns: 1fr 2fr;
+          grid-template-areas:
+            "member-image member-image"
+            "member-social member-social"
+            "member-content member-content";
+          &__title {
+            h4,
+            h5 {
+              margin-bottom: 0;
+              line-height: 1.15;
+            }
+          }
+          &__meta {
+            margin-bottom: 1rem;
+            font-size: 14px;
+            color: var(--catalina-blue);
+          }
+          &__description {
+            p {
+              margin-bottom: 25px;
+              line-height: 1.5;
+              color: var(--catalina-blue);
+              &:last-of-type {
+                margin-bottom: 10px;
+              }
+            }
+          }
+          &__details {
+            .wp-block-social-links {
+              display: none;
+            }
+          }
+          .wp-block-social-links {
+            .wp-social-link {
+              background-color: transparent;
+              a {
+                width: 24px;
+                height: 24px;
+                svg {
+                  display: none;
+                }
+              }
+              &-linkedin {
+                a {
+                  background-image: url($linked-in);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .page-leadership,
+  .page-leadership-team {
+    .fancybox-container {
+      .fancybox-slide {
+        .fancybox-content {
+          width: 970px;
+          height: 495px;
+          padding: 50px 50px 0 50px;
+          .bs-post {
+            grid-template-columns: 320px 1fr;
+            grid-template-rows: 346px 1fr;
+            grid-template-areas:
+              "member-image member-content"
+              "member-social member-content";
+            &__image {
+              figure {
+                width: 320px;
+                height: 320px;
+                border-radius: 5px;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+            &__title {
+              h4,
+              h5 {
+                font-size: 26px;
+                line-height: 1.25;
+                letter-spacing: -1px;
+              }
+            }
+            &__details {
+              padding: 0 0 0 50px;
+              .wp-block-social-links {
+                display: none;
+              }
+            }
+            &__meta {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bs-post > .wp-block-social-links {
+  display: block;
+  li {
+    display: inline-block;
+  }
+}
+// Leadership popup grid template areas
+.fancybox-container .bs-post .bs-post__image {
+  grid-area: member-image;
+}
+.fancybox-container .bs-post .bs-post__details {
+  grid-area: member-content;
+}
+.fancybox-container .bs-post .wp-block-social-links {
+  grid-area: member-social;
+}

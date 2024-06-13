@@ -1,0 +1,173 @@
+// Button Styles
+
+a,
+button {
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+.bs-pro-button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: initial;
+  &__container {
+    margin: 0;
+    background-color: transparent;
+    color: inherit;
+  }
+}
+
+@mixin convex-button {
+  display: inline-block;
+  min-width: initial;
+  min-height: initial;
+  margin: 0;
+  padding: 9px 20px 9px;
+  border: none;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+  font-family: $font-avenir-demi;
+  vertical-align: top;
+  text-align: center;
+  color: var(--pure-white);
+  text-transform: none;
+  text-decoration: none;
+  letter-spacing: 0;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    opacity: 1;
+    border: none;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+  }
+  &:disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+
+// Buttons
+.btn-primary,
+%btn-primary {
+  @include convex-button;
+  background-color: var(--orange-red);
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--orange-red-dark);
+  }
+}
+.btn-primary-small,
+%btn-primary-small {
+  @include convex-button;
+  background-color: var(--orange-red);
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    background-color: var(--orange-red-dark);
+  }
+}
+
+// Links
+@mixin convex-link {
+  @include convex-button;
+  position: relative;
+  padding: 0 30px 0 0;
+  &:after {
+    @include sprite-arrow-white;
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    filter: none;
+  }
+}
+.btn-primary-link-arrow-black,
+%btn-primary-link-arrow-black {
+  @include convex-link;
+  color: var(--black-pearl);
+  &::after {
+    @include sprite-arrow-black;
+  }
+}
+.btn-primary-link-arrow,
+%btn-primary-link-arrow {
+  @include convex-link;
+}
+.btn-primary-link-arrow-small,
+%btn-primary-link-arrow-small {
+  @include convex-link;
+  padding: 0 20px 0 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--orange-red);
+  &:after {
+    @include sprite-arrow-orange;
+    top: 2px;
+  }
+  &:hover,
+  &:focus,
+  &:not(:disabled):not(.disabled):active:focus {
+    filter: invert(27%) sepia(24%) saturate(7200%) hue-rotate(7deg)
+      brightness(700%) contrast(103%);
+  }
+}
+
+//link with no text
+.btn-primary-link-arrow-only,
+%btn-primary-link-arrow-only {
+  @include convex-link;
+  width: 24px;
+  padding: 0;
+  font-size: 0;
+}
+
+//btn won't be visible
+.btn-hidden,
+%btn-hidden {
+  display: inline-block;
+  width: 100%;
+  min-width: initial;
+  height: 100%;
+  min-height: initial;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  font-size: 0;
+  vertical-align: top;
+}
+
+// Cookie Button
+.cookie-btn-primary {
+  padding: 6px 10px;
+  color: var(--pure-white);
+  border-radius: 4px;
+  background-color: var(--orange-red);
+  &:hover,
+  &:focus,
+  &:active,
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled):active:focus {
+    color: var(--pure-white);
+    background-color: var(--orange-red-dark);
+    box-shadow: 0 4px 10px 0 rgba(var(--orange-red-dark), 0.3);
+  }
+}

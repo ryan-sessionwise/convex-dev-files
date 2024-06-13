@@ -1,0 +1,27 @@
+{
+  "name": "e25/berg-theme-child",
+  "type": "wordpress-theme",
+  "license": [
+	"GPL-2.0"
+  ],
+  "description": "berg theme for WordPress",
+  "authors": [
+	{
+	  "name": "Kasun Thilina",
+	  "email": "kasunt@eight25media.com",
+	  "homepage": "https://gitlab.com/e25berg"
+	}
+  ],
+  "keywords": [
+	"wordpress",
+	"composer",
+	"wp",
+	"berg",
+	"theme"
+  ],
+  "require": {
+	"php": ">=7.0"
+  },
+  "scripts": {
+  }
+}

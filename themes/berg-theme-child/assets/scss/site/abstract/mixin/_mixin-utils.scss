@@ -1,0 +1,49 @@
+// After Before
+@mixin after-before($display-prop: null) {
+  content: "";
+  position: absolute;
+  display: $display-prop;
+}
+// Border radius
+@mixin border-radius(
+  $top-left: 10px,
+  $top-right: null,
+  $bottom-right: null,
+  $bottom-left: null
+) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+// Box shadow
+@mixin box-shadows($top, $left, $bottom, $right, $color) {
+  box-shadow: $top $left $bottom $right $color;
+}
+// Limit content by number of rows
+@mixin content-limit($size) {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $size;
+  -webkit-box-orient: vertical;
+}
+// Image fill
+@mixin image-fill($obj-fit: cover, $obj-position: null) {
+  width: 100%;
+  height: 100%;
+  object-fit: $obj-fit;
+  object-position: $obj-position;
+}
+
+// Overlay
+@mixin overlay {
+  &::before {
+    @include after-before;
+    z-index: $z-index-one;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 31%,
+      var(--pure-black) 100%
+    );
+  }
+}

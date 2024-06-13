@@ -1,0 +1,49 @@
+{
+    "name": "Berg",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "ng": "node node-generator.js",
+        "ng:wo": "node node-generator-wo-defaults.js",
+        "clean": "rimraf ../dist/* ../build/*",
+        "start:css": "gulp watch",
+        "start:js": "webpack --watch --mode development --config .config/webpack.config.dev.js",
+        "build:css": "gulp run",
+        "build:js": "webpack --config .config/webpack.config.prod.js",
+        "dev": "npm run clean && concurrently \"npm run start:js\" \"npm run start:css\"",
+        "build": "npm run clean && concurrently \"npm run build:js\" \"npm run build:css\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.12.3",
+        "@babel/preset-env": "^7.12.1",
+        "@babel/preset-react": "^7.12.5",
+        "@babel/register": "^7.12.1",
+        "autoprefixer": "^9.0.0",
+        "babel-loader": "^8.2.1",
+        "concurrently": "^5.3.0",
+        "copy-webpack-plugin": "^6.3.2",
+        "gulp": "^4.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-postcss": "^9.0.0",
+        "gulp-sass": "^4.1.0",
+        "gulp-sourcemaps": "^3.0.0",
+        "node-sass": "^5.0.0",
+        "rimraf": "^3.0.2",
+        "webpack": "^4.41.4",
+        "webpack-cli": "^4.0.0"
+    },
+    "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
+        "bootstrap": "^4.5.3",
+        "countup.js": "^2.0.7",
+        "isotope-layout": "^3.0.6",
+        "jquery": "^3.5.1",
+        "react-slick": "^0.27.12",
+        "select2": "^4.0.13",
+        "slick-carousel": "^1.8.1"
+    }
+}

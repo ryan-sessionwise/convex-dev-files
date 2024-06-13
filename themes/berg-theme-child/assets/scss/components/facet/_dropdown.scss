@@ -1,0 +1,25 @@
+[data-type="dropdown"] {
+  position: relative;
+  &::before {
+    @include after-before;
+    top: -11px;
+    right: 11px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    transform: rotate(135deg);
+    pointer-events: none;
+    border-width: 1px 1px 0 0;
+    border-color: var(--cerulean);
+    border-style: solid;
+  }
+}
+.facetwp-dropdown {
+  width: 100%;
+  padding: 15px 10px 12px;
+  border: none;
+  background-color: transparent;
+  color: var(--catalina-blue);
+  border-bottom: 1px solid var(--very-light-blue);
+}

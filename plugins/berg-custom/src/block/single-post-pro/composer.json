@@ -1,0 +1,28 @@
+{
+  "name": "e25/single-post",
+  "type": "wordpress-bergblock",
+  "license": [
+	"GPL-2.0"
+  ],
+  "description": "single post berg block for WordPress",
+  "authors": [
+	{
+	  "name": "Indika Gamage",
+	  "email": "indika@eight25media.com",
+	  "homepage": "https://gitlab.com/e25berg/single-post"
+	}
+  ],
+  "keywords": [
+	"wordpress",
+	"composer",
+	"wp",
+	"berg",
+    "block"
+  ],
+  "require": {
+	"php": ">=7.0"
+  },
+  "scripts": {
+  }
+}
+

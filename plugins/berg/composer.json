@@ -1,0 +1,26 @@
+{
+  "name": "e25/berg",
+  "type": "wordpress-plugin",
+  "license": [
+	"GPL-2.0"
+  ],
+  "description": "berg for WordPress",
+  "authors": [
+	{
+	  "name": "Indika Gamage",
+	  "email": "indika@eight25media.com",
+	  "homepage": "https://gitlab.com/projectberg/berg"
+	}
+  ],
+  "keywords": [
+	"wordpress",
+	"composer",
+	"wp",
+	"berg"
+  ],
+  "require": {
+	"php": ">=7.0"
+  },
+  "scripts": {
+  }
+}

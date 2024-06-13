@@ -1,0 +1,13 @@
+.mtsnb {
+  font-family: $font-avenir-demi;
+  .mtsnb-container {
+    padding: 9px 60px 8px;
+  }
+  .mtsnb-text{
+    letter-spacing: .3px;
+  }
+  .mtsnb-button{
+    padding: 5px 9px 1px;
+    border-radius: 2px;
+  }
+}

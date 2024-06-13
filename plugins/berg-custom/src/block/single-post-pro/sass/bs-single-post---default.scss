@@ -1,0 +1,163 @@
+//Default Styles
+
+//Theme Default
+
+@import "../../../theme-defaults.scss";
+
+//Color values
+
+$DEFAULT__bs-single-post__category--color: $THEME-PRIMARY-COLOR--black;
+$DEFAULT__bs-single-post__description--color: $THEME-PRIMARY-COLOR--charoal-grey;
+$DEFAULT__bs-single-post__learn-more--color: $THEME-PRIMARY-COLOR--mid-green;
+$DEFAULT__bs-single-post__date--color: $THEME-PRIMARY-COLOR--battleship-grey;
+$DEFAULT__bs-single-post__title--color: $THEME-PRIMARY-COLOR--black;
+
+//Font Weights
+
+$DEFAULT__bs-single-post__font-weight--bold: $THEME-FONT-WEIGHT-BOLD;
+$DEFAULT__bs-single-post__font-weight--medium: $THEME-FONT-WEIGHT-MEDIUM;
+$DEFAULT__bs-single-post__font-weight--regular: $THEME-FONT-WEIGHT-REGULAR;
+$DEFAULT__bs-single-post__font-weight--light: $THEME-FONT-WEIGHT-LIGHT;
+
+//Font Sizes
+
+$DEFAULT__bs-single-post__font-size--extra-small: 13px;
+$DEFAULT__bs-single-post__font-size--small: 16px;
+$DEFAULT__bs-single-post__font-size--medium: 22px;
+
+$DEFAULT__bs-single-post__category--font-size: $DEFAULT__bs-single-post__font-size--extra-small;
+$DEFAULT__bs-single-post__description--font-size: $DEFAULT__bs-single-post__font-size--small;
+$DEFAULT__bs-single-post__learn-more--font-size: $DEFAULT__bs-single-post__font-size--small;
+$DEFAULT__bs-single-post__date--font-size: $DEFAULT__bs-single-post__font-size--extra-small;
+$DEFAULT__bs-single-post__title--font-size: $DEFAULT__bs-single-post__font-size--medium;
+
+//Image values
+$DEFAULT__bs-single-post__image--height: 10.5vw;
+$DEFAULT__bs-single-post__image--max-height: 220px;
+$DEFAULT__bs-single-post__image--margin: 0 0 20px 0;
+$DEFAULT__bs-single-post__image-figure--margin: 0;
+
+//Description values
+$DEFAULT__bs-single-post-description--paragraph-limit: 3;
+$DEFAULT__bs-single-post-description--line-height: 1.38;
+
+//Learn more values
+$DEFAULT__bs-single-post-learnmore--opacity: 0.7;
+
+//Title values
+$DEFAULT__bs-single-post-title--line-height: 1.38;
+
+
+.bs-post {
+  $this: &;
+
+  &.bs-single-post---default {
+	#{$this}__trigger {
+	  display: block;
+	}
+
+	#{$this}__category {
+	  display: inline-block;
+	  margin: 0 5px 12px 0;
+	  padding-right: 20px;
+	  position: relative;
+
+	  &::after {
+		content: "/";
+		position: absolute;
+		right: 0;
+		color: $THEME-PRIMARY-COLOR--cool-grey;
+		width: 7px;
+		height: 13px;
+		opacity: 0.4;
+		font-size: $DEFAULT__bs-single-post__font-size--extra-small;
+		top: 3px;
+	  }
+
+	  span {
+		font-size: $DEFAULT__bs-single-post__font-size--extra-small;
+		font-weight: $DEFAULT__bs-single-post__font-weight--medium;
+		color: $DEFAULT__bs-single-post__category--color;
+		text-transform: uppercase;
+	  }
+	}
+
+	#{$this}__date {
+	  display: inline-block;
+
+	  span {
+		font-size: $DEFAULT__bs-single-post__font-size--extra-small;
+		font-weight: $DEFAULT__bs-single-post__font-weight--regular;
+		color: $DEFAULT__bs-single-post__date--color;
+	  }
+	}
+
+	#{$this}__title  {
+	  font-size: $DEFAULT__bs-single-post__title--font-size;
+	  font-weight: $DEFAULT__bs-single-post__font-weight--medium;
+	  color: $DEFAULT__bs-single-post__title--color;
+	  line-height: $DEFAULT__bs-single-post-title--line-height;
+	}
+
+	#{$this}__description {
+	  p {
+		font-weight: $DEFAULT__bs-single-post__font-weight--regular;
+		font-size: $DEFAULT__bs-single-post__description--font-size;
+		color: $DEFAULT__bs-single-post__description--color;
+		line-height: $DEFAULT__bs-single-post-description--line-height;
+		display: -webkit-box;
+		-webkit-line-clamp: $DEFAULT__bs-single-post-description--paragraph-limit;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	  }
+	}
+
+	#{$this}__learn-more {
+	  .btn {
+		font-weight: $DEFAULT__bs-single-post__font-weight--regular;
+		font-size: $DEFAULT__bs-single-post__font-size--small;
+		color: $DEFAULT__bs-single-post__learn-more--color;
+
+		&:hover {
+		  opacity: $DEFAULT__bs-single-post-learnmore--opacity;
+		}
+	  }
+	}
+
+	#{$this}__image {
+	  margin: $DEFAULT__bs-single-post__image--margin;
+
+	  figure {
+		margin: $DEFAULT__bs-single-post__image-figure--margin;
+
+		img {
+		  width: 100%;
+		}
+	  }
+	}
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .bs-single-post {
+	$this: &;
+
+	&.bs-single-post---default {
+	  #{$this}__image {
+		height: $DEFAULT__bs-single-post__image--height;
+		max-height: $DEFAULT__bs-single-post__image--max-height;
+		margin: $DEFAULT__bs-single-post__image--margin;
+
+		figure {
+		  width: 100%;
+		  height: 100%;
+
+		  img {
+			height: 100%;
+			object-fit: cover;
+		  }
+		}
+	  }
+	}
+  }
+}

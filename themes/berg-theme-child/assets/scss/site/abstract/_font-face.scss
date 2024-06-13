@@ -1,0 +1,25 @@
+$fontPath : '../fonts/';
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/4a8ffb");
+
+// Bold
+@font-face {
+  font-family: "Avenir Next LT Pro Bold";
+  src: url('#{$fontPath}AvenirNextLTProBold/font.woff2') format('woff2'), url('webFonts/AvenirNextLTProBold/font.woff') format('woff');
+}
+// Demi
+@font-face {
+  font-family: "Avenir Next LT Pro Demi";
+  src: url('#{$fontPath}AvenirNextLTProDemi/font.woff2') format('woff2'), url('webFonts/AvenirNextLTProDemi/font.woff') format('woff');
+}
+// Medium
+@font-face {
+  font-family: "Avenir Next LT Pro Medium";
+  src: url('#{$fontPath}AvenirNextLTProMedium/font.woff2') format('woff2'), url('webFonts/AvenirNextLTProMedium/font.woff') format('woff');
+}
+// Regular
+@font-face {
+  font-family: "Avenir Next LT Pro Regular";
+    src: url('#{$fontPath}/AvenirNextLTProRegular/font.woff2') format('woff2'), url('webFonts/AvenirNextLTProRegular/font.woff') format('woff');
+}

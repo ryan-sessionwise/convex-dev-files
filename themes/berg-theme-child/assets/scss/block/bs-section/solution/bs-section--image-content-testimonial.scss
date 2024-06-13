@@ -1,0 +1,115 @@
+.bs-section--image-content-testimonial {
+  padding: 45px 0;
+  //Round BG
+  .bs-column--column-blue-lines-bg-left {
+    @include bs-column---blue-lines-bg-left;
+  }
+  .bs-column--column-blue-lines-bg {
+    @include bs-column---blue-lines-bg;
+  }
+  //Left Image
+  .row {
+    > div:not(.bs-column--content) {
+      .media-elements {
+        .bs-common-image {
+          figure {
+            width: 100%;
+            img {
+              width: 100%;
+              height: auto;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+  //Right Content
+  .bs-column--content {
+    padding-top: 25px;
+    h3 {
+      margin-bottom: 20px;
+    }
+    @include blockquote;
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--image-content-testimonial {
+    //Round BG
+    .bs-column--column-blue-lines-bg {
+      background-position-x: calc(100% - 25px);
+      .media-elements {
+        .bs-common-image {
+          figure {
+            padding: 25px 50px 0 0;
+          }
+        }
+      }
+    }
+    .bs-column--column-blue-lines-bg-left {
+      background-position-x: 15px;
+      .media-elements {
+        .bs-common-image {
+          figure {
+            padding: 25px 25px 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--image-content-testimonial {
+    padding: 100px 0;
+    //Round BG
+    .bs-column--column-blue-lines-bg {
+      background-position-x: calc(100% - 85px);
+      .media-elements {
+        .bs-common-image {
+          figure {
+            padding: 51px 120px 0 0;
+          }
+        }
+      }
+    }
+    .bs-column--column-blue-lines-bg-left {
+      background-position-x: 15px;
+      .media-elements {
+        .bs-common-image {
+          figure {
+            padding: 51px 60px 0;
+          }
+        }
+      }
+    }
+    //Right Content
+    .bs-column--content {
+      padding-top: 57px;
+      h3 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+@include media-breakpoint-only(sm) {
+  .bs-section--image-content-testimonial {
+    //Right Content
+    .bs-column--content {
+      padding-top: 0;
+    }
+  }
+}
+//CMS Styles
+div[data-type="e25m/section"] {
+  .bs-section--image-content-testimonial {
+    div.media-elements {
+      height: auto;
+      .bs-common-image {
+        figure.figure {
+          height: auto;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

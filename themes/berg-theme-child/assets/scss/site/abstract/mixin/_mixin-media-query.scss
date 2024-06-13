@@ -1,0 +1,4 @@
+// media query above 1440px
+@mixin media-breakpoint-wide-screen {
+  @media (min-width: 1445px) { @content; }
+}

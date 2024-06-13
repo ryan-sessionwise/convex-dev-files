@@ -1,0 +1,8 @@
+// Gradient
+@mixin gradient($direction, $color1, $color2) {
+  background-image: linear-gradient($direction, $color1, $color2);
+}
+// gradient background
+@mixin common-gradient($direction, $color1, $color2) {
+  background: linear-gradient($direction, $color1 0%, $color2 100%);
+}

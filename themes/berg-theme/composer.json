@@ -1,0 +1,27 @@
+{
+  "name": "e25/berg-theme",
+  "type": "wordpress-theme",
+  "license": [
+	"GPL-2.0"
+  ],
+  "description": "berg theme for WordPress",
+  "authors": [
+	{
+	  "name": "N Sivanoly",
+	  "email": "sivanoly@eight25media.com",
+	  "homepage": "https://gitlab.com/projectberg/berg"
+	}
+  ],
+  "keywords": [
+	"wordpress",
+	"composer",
+	"wp",
+	"berg",
+	"theme"
+  ],
+  "require": {
+	"php": ">=7.0"
+  },
+  "scripts": {
+  }
+}

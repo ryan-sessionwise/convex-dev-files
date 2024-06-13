@@ -1,0 +1,27 @@
+.bs-section--about-convex-banner{
+  .bs-section__image-container{
+    bottom: 30px;
+    left: calc(50% + 52px);
+    height: 82% !important; //overwrite default styles
+    transform: translateX(-50%);
+    picture{
+      img{
+        object-fit: contain !important;
+      }
+    }
+  }
+  .container,
+  .container-fluid{
+    .bs-column--column-left{
+      padding-top: 5px;
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .bs-section--about-convex-banner{
+    .bs-section__image-container{
+      top: -167px;
+      left: 92%;
+    }
+  }
+}

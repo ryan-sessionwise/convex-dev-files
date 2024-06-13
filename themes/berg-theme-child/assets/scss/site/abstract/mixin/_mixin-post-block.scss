@@ -1,0 +1,90 @@
+@mixin bs-post-card-meta($color: var(--black-pearl)) {
+  .bs-post__category,
+  .bs-post__date,
+  .bs-post__webinar-text,
+  .bs-post-event_date {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 0.9;
+    &::after {
+      content: "";
+    }
+    span {
+      font-size: 12px;
+      font-family: $font-avenir-demi;
+      color: $color;
+      letter-spacing: 1px;
+    }
+  }
+  .bs-post__date,
+  .bs-post-event_date {
+    margin-bottom: 25px;
+    span {
+      opacity: 0.5;
+      display: block;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      span {
+        opacity: 1;
+        margin-top: 5px;
+      }
+    }
+  }
+  .bs-post__webinar-text {
+    margin-top: -10px;
+  }
+}
+
+@mixin bs-post-card-title($color: var(--black-pearl), $title-char-limit: 6) {
+  .bs-post__title {
+    margin-bottom: 20px;
+    h4,
+    h5 {
+      @include content-limit($title-char-limit);
+      line-height: 1.16;
+      color: $color;
+      letter-spacing: -1px;
+      @content;   
+    }
+  }
+  @include media-breakpoint-up(lg) {
+    .bs-post__title {
+      h4,
+      h5 {
+        font-size: $h4-font-size;
+      }
+    }
+  }
+}
+
+@mixin bs-post-card-description(
+  $color: var(--catalina-blue),
+  $desc-char-limit: 4
+) {
+  .bs-post__description {
+    p {
+      @include content-limit($desc-char-limit);
+      line-height: 1.5;
+      color: $color;
+      @content;
+    }
+  }
+}
+
+@mixin bs-post-card-text-white {
+  .bs-post__category,
+  .bs-post__date,
+  .bs-post__webinar-text,
+  .bs-post-event_date,
+  .bs-post__title {
+    h3,
+    h4,
+    h5,
+    p,
+    span {
+      opacity: 1;
+      color: var(--pure-white);
+    }
+  }
+}

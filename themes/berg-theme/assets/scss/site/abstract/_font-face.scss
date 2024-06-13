@@ -1,0 +1,10 @@
+$fontPath : '../fonts/';
+
+@font-face {
+    font-family: "HK Grotesk Regular";
+    font-display: swap;
+    src: url("#{$fontPath}HKGroteskRegular.eot");
+    src: url("#{$fontPath}HKGroteskRegular.woff") format("woff"), url("#{$fontPath}HKGroteskRegular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,46 @@
+.bs-column--blog-related-post {
+  .rp4wp-related-posts {
+    display: block;
+    padding-top: 50px;
+    h3 {
+      @include heading4;
+      margin-bottom: 35px;
+    }
+    > ul {
+      li {
+        .rp4wp-related-post-content {
+          a {
+            @include heading5;
+            display: block;
+            padding-left: 27px;
+            margin-bottom: 35px;
+            border-left: 1px solid var(--very-light-blue);
+            &:link,
+            &:visited {
+              color: var(--black-pearl);
+            }
+            &:hover {
+              color: var(--orange-red-dark);
+              border-left: 1px solid var(--orange-red-dark);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-column--blog-related-post {
+    .rp4wp-related-posts {
+      > ul {
+        li {
+          .rp4wp-related-post-content {
+            a {
+              line-height: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

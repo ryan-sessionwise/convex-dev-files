@@ -1,0 +1,94 @@
+.bs-section--about-color-cards {
+  padding: 30px 0 20px;
+  .bs-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+    .bs-card {
+      padding: 40px;
+      border-radius: 5px;
+      &__image {
+        padding-bottom: 16px;
+        figure {
+          width: 34px;
+          height: 34px;
+          margin: 0;
+          img {
+            @include image-fill(contain, left);
+          }
+        }
+      }
+      &__title {
+        padding-bottom: 6px;
+        h4 {
+          @include heading4;
+          color: var(--black-pearl);
+        }
+      }
+      &__description {
+        p {
+          margin: 0;
+          line-height: 1.5;
+          color: var(--catalina-blue);
+        }
+      }
+      &__subtitle {
+        display: none;
+      }
+      &:nth-of-type(3n -2) {
+        background-color: var(--alice-blue);
+      }
+      &:nth-of-type(3n-1) {
+        background-color: var(--light-grayish-blue);
+      }
+      &:nth-of-type(3n) {
+        background-color: var(--swiss-coffee);
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--about-color-cards {
+    .bs-column {
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+    }
+    padding: 75px 0 65px;
+  }
+}
+@include media-breakpoint-up(xl) {
+  .bs-section--about-color-cards {
+    .bs-column {
+      column-gap: 75px;
+    }
+  }
+}
+//BE Style
+.bs-section--about-color-cards {
+  div[data-type="e25m/column"] {
+    display: block;
+    .block-editor-block-list__layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+      grid-row-gap: 20px;
+      div[data-type="e25m/card"] {
+        &:nth-of-type(3n -2) {
+          .bs-card {
+            background-color: var(--alice-blue);
+          }
+        }
+        &:nth-of-type(3n-1) {
+          .bs-card {
+            background-color: var(--light-grayish-blue);
+          }
+        }
+        &:nth-of-type(3n) {
+          .bs-card {
+            background-color: var(--swiss-coffee);
+          }
+        }
+      }
+    }
+  }
+}

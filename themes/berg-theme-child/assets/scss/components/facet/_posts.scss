@@ -1,0 +1,259 @@
+.facetwp-template {
+  .bs-posts{
+    padding-top: 20px;
+  }
+  .bs-post {
+    height: auto;
+    margin-bottom: 30px;
+    &__list{
+      > p{
+        @include heading4;
+        margin: 0 auto;
+      }
+    }
+    &__container {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+      border-radius: 5px;
+      &:hover {
+        .bs-post__image {
+          figure {
+            img{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+    &__details {
+      z-index: $z-index-two;
+      padding: 30px 20px 40px;
+    }
+    &__image {
+      figure {
+        overflow: hidden;
+        width: 100%;
+        height: 200px;
+        display: block;
+        margin-bottom: 0;
+        img {
+          @include image-fill;
+          transition: transform 0.3s;
+        }
+      }
+    }
+    &__category,
+    &__date,
+    &__webinar-text,
+    .bs-post-event_date {
+      display: block;
+      margin-bottom: 13px;
+      line-height: 0.9;
+      &::after {
+        content: "";
+      }
+      span {
+        font-size: 12px;
+        font-family: $font-avenir-demi;
+        color: var(--black-pearl);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+    &__webinar-text{
+      margin-top: -10px;
+    }
+    &__date,
+    .bs-post-event_date {
+      margin-bottom: 25px;
+      span {
+        opacity: 0.5;
+        display: block;
+        margin-top: 10px;
+        letter-spacing: 0;
+        span {
+          opacity: 1;
+          margin-top: 5px;
+        }
+      }
+    }
+    &__title {
+      margin-bottom: 15px;
+      h4,
+      h5 {
+        @include content-limit(4);
+        line-height: 1.16;
+        color: var(--black-pearl);
+        letter-spacing: -1px;
+      }
+    }
+    &__description {
+      p {
+        @include content-limit(2);
+        line-height: 1.5;
+        color: var(--catalina-blue);
+      }
+    }
+    &:nth-of-type(odd) {
+      .bs-post {
+        &__container {
+          background: var(--alice-blue);
+        }
+      }
+    }
+    &:nth-of-type(even) {
+      .bs-post {
+        &__container {
+          box-shadow: 0 1px 3px 0 rgba(0, 98, 169, 0.15);
+        }
+        &__image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .facetwp-template {
+    .bs-post {
+      height: 500px;
+      &__inner {
+        height: 100%;
+      }
+      &__image {
+        figure {
+          img {
+            height: 100%;
+          }
+        }
+      }
+      &__learn-more {
+        position: absolute;
+        bottom: 40px;
+      }
+      &:nth-of-type(even) {
+        .bs-post {
+          &__container {
+            box-shadow: none;
+            &::before {
+              @include after-before;
+              z-index: $z-index-one;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 31%, var(--pure-black) 100%);
+            }
+          }
+          &__image {
+            position: absolute;
+            figure {
+              height: 100%;
+            }
+          }
+          &__details {
+            height: 100%;
+            position: relative;
+            padding: 230px 40px 40px;
+          }
+          &__title {
+            h4,
+            h5 {
+              color: var(--pure-white);
+            }
+          }
+          &__description {
+            p {
+              color: var(--pure-white);
+            }
+          }
+          &__category,
+          &__date,
+          &__webinar-text,
+          &-event_date {
+            span {
+              opacity: 1;
+              color: var(--pure-white);
+            }
+          }
+        }
+      }
+    }
+    &[data-name="resources"]{
+      .bs-post {
+        height: 450px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .facetwp-template {
+    .bs-post {
+      height: 550px;
+      &__title {
+        h4,
+        h5 {
+          font-size: $h4-font-size;
+        }
+      }
+      &__details {
+        padding: 41px 40px 40px;
+      }
+      &:nth-of-type(odd) {
+        .bs-post {
+          &__image {
+            figure {
+              height: 200px;
+            }
+          }
+        }
+      }
+      &:nth-of-type(even) {
+        .bs-post {
+          &__details {
+            padding: 240px 40px 40px;
+          }
+        }
+      }
+    }
+    .bs-posts__filters {
+      margin-bottom: 45px;
+    }
+    &[data-name="resources"]{
+      .bs-post {
+        height: 510px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .facetwp-template {
+    .bs-post {
+      height: 632px;
+      &:nth-of-type(odd) {
+        .bs-post {
+          &__image {
+            figure {
+              height: 266px;
+            }
+          }
+        }
+      }
+      &:nth-of-type(even) {
+        .bs-post {
+          &__details {
+            padding: 307px 40px 40px;
+          }
+        }
+      }
+    }
+    &[data-name="resources"]{
+      .bs-post {
+        height: 554px;
+      }
+    }
+  }
+}

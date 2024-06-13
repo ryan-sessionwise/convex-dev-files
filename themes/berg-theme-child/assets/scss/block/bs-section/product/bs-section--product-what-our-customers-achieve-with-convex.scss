@@ -1,0 +1,116 @@
+.bs-section--product-what-our-customers-achieve-with-convex {
+  width: 100%;
+  padding: 40px 0 40px 0;
+  .bs-background {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 404px;
+    height: 431px;
+    picture {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  h2 {
+    margin: 0;
+    font-family: $font-avenir-medium;
+    color: var(--pure-white);
+  }
+  .slick-list {
+    height: auto !important; // overriding inline css
+  }
+  .slick-slide-wrapper {
+    margin-top: 50px;
+    .media-elements {
+      .bs-common-image {
+        width: 100%;
+        max-width: 755px;
+        figure {
+          picture {
+            img {
+              width: 100%;
+              @include border-radius(5px);
+            }
+          }
+        }
+      }
+    }
+    .bs-blurb {
+      float: right;
+      width: 100%;
+      margin-top: 32px;
+      .bs-blurb__image {
+        display: none;
+      }
+      .bs-blurb__title {
+        margin-bottom: 25px;
+        h3 {
+          margin: 0;
+          padding: 0;
+          line-height: normal;
+          color: var(--pure-white);
+        }
+      }
+      .bs-blurb__description {
+        p {
+          margin-bottom: 0;
+          font-size: $h6-font-size;
+          line-height: 24px;
+          color: var(--pure-white);
+          color: var(--pure-white);
+        }
+      }
+      .bs-blurb__read-more {
+        margin-top: 35px;
+        a {
+          @include convex-button;
+          padding: 10px 20px 8px;
+          background-color: var(--orange-red);
+        }
+      }
+    }
+  }
+  .slick-dots {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bs-section--product-what-our-customers-achieve-with-convex {
+    padding: 100px 0 60px 0;
+    .slick-slide {
+      margin-left: 1px;
+    }
+    .slick-slide-wrapper {
+      .bs-blurb {
+        width: 100%;
+        max-width: 340px;
+        margin-top: 11px;
+      }
+    }
+    .slick-dots {
+      float: right;
+      width: 290px;
+      margin-top: -50px;
+      margin-right: 4px;
+      text-align: left;
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bs-section--product-what-our-customers-achieve-with-convex {
+    .slick-dots {
+      width: 340px;
+    }
+  }
+}

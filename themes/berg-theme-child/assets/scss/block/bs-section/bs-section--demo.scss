@@ -1,0 +1,16 @@
+.bs-section--demo {
+  h1 {
+    &:nth-of-type(3) {
+      font-family: $font-avenir-bold;
+    }
+    &:nth-of-type(5) {
+      font-family: $font-avenir-demi;
+    }
+    &:nth-of-type(7) {
+      font-family: $font-avenir-medium;
+    }
+    &:nth-of-type(9) {
+      font-family: $font-avenir-regular;
+    }
+  }
+}

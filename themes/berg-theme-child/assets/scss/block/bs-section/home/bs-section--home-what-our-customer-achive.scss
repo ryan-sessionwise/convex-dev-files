@@ -1,0 +1,272 @@
+@include media-breakpoint-up(sm) {
+  .bs-div--home-slider-heading {
+    padding: 0 200px 30px 0;
+  }
+  .bs-section--home-what-our-customer-achive {
+    .bs-column {
+      .bs-div {
+        .bs-blurb {
+          right: 0;
+          bottom: 10px;
+          width: 300px;
+          padding: 35px 35px 28px 35px;
+        }
+      }
+    }
+    .bs-slider-tabs {
+      padding-top: 0;
+      .slick-slide {
+        cursor: pointer;
+        .slick-slide-wrapper {
+          display: block;
+          line-height: 1;
+          // To overwrite align  without logged
+          text-align: left !important;
+          transition: all 0.3s ease-in-out;
+        }
+        &.slick-current {
+          cursor: default;
+          .slick-slide-wrapper {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .bs-slider-content {
+      display: block;
+      .slick-slide {
+        .slick-slide-wrapper {
+          .media-elements {
+            figure {
+              picture {
+                max-width: 344px;
+                height: 464px;
+              }
+            }
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--home-what-our-customer-achive {
+    .bs-column {
+      .bs-div {
+        padding-right: 100px;
+        .bs-blurb {
+          right: 0;
+          bottom: 11px;
+          width: 300px;
+          padding: 35px 35px 28px 35px;
+        }
+      }
+      .bs-div--home-slider-heading {
+        padding: 0 200px 30px 0;
+      }
+    }
+
+    .bs-slider {
+      &-content {
+        .slick-slide {
+          .slick-slide-wrapper {
+            .media-elements {
+              figure {
+                picture {
+                  max-width: 400px;
+                  height: 459px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--home-what-our-customer-achive {
+    .bs-column {
+      position: relative;
+      .bs-div {
+        padding: 0;
+        display: block;
+        .bs-blurb {
+          right: 0;
+          bottom: 0;
+        }
+      }
+      .bs-div--home-slider-heading {
+        display: none;
+      }
+
+      > .bs-tab-slider {
+        display: flex;
+        margin-top: 20px;
+      }
+      > .bs-pro-button {
+        position: absolute;
+        bottom: 53px;
+      }
+    }
+    .bs-slider-tabs {
+      .bs-div--home-slider-heading {
+        display: block;
+        padding: 0 30px 52px 0;
+        h2 {
+          padding-bottom: 18px;
+          line-height: 50px;
+        }
+        p {
+          opacity: 0.75;
+          line-height: 1.2;
+          color: var(--pure-white);
+          font-size: $h5-font-size;
+        }
+      }
+      .slick-track {
+        display: flex;
+        flex-direction: column;
+        // To overwrite inline style
+        width: 280px !important;
+        margin: 0;
+        text-align: left;
+        // To overwrite inline style
+        transform: unset !important;
+      }
+      padding-top: 60px;
+      .slick-slide {
+        // overwrite inline css  rule
+        width: 280px !important;
+        .slick-slide-wrapper {
+          padding-bottom: 36px;
+        }
+        &.slick-current {
+          h4 {
+            padding: 3px 0 4px 25px;
+            line-height: 1.2;
+            text-align: left;
+            &::before {
+              content: "";
+              position: absolute;
+              top: -4px;
+              left: 0;
+              width: 5px;
+              height: 43px;
+              background-image: linear-gradient(
+                to bottom,
+                var(--vivid-orange),
+                var(--orange-red) 115%
+              );
+            }
+          }
+        }
+      }
+      .slick-list {
+        margin: 0 0 131px 0;
+      }
+      .slick-slide {
+        cursor: pointer;
+        .slick-slide-wrapper {
+          display: block;
+          padding-bottom: 36px;
+          line-height: 1;
+          // To overwrite align  without logged
+          text-align: left !important;
+          transition: all 0.3s ease-in-out;
+        }
+        &.slick-current {
+          cursor: default;
+          .slick-slide-wrapper {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+    .bs-slider-content {
+      display: block;
+      .slick-list {
+        max-width: 600px;
+        .slick-track {
+          display: flex;
+        }
+      }
+      .slick-slide {
+        position: relative;
+        width: 700px;
+        height: auto;
+        padding: 30px 0 30px 30px;
+        .slick-slide-wrapper {
+          .media-elements {
+            figure {
+              picture {
+                max-width: 470px;
+                height: 550px;
+              }
+            }
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bs-section--home-what-our-customer-achive {
+    .bs-background {
+      display: block;
+      opacity: 0.15;
+      position: absolute;
+      top: 0;
+      right: -15px;
+      width: 694px;
+      height: 690px;
+      picture {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .bs-div--home-slider-heading {
+      padding: 0 30px 53px 0;
+      h2 {
+        padding-bottom: 18px;
+      }
+    }
+    .bs-column {
+      > .bs-tab-slider {
+        .bs-slider-tabs {
+          .slick-track {
+            // To overwrite inline style without logged
+            width: 320px !important;
+          }
+        }
+      }
+    }
+    .bs-slider-content {
+      .slick-list {
+        max-width: 720px;
+      }
+      .slick-slide {
+        width: 720px;
+        min-height: 460px;
+        padding: 56px 0 53px 51px;
+        .slick-slide-wrapper {
+          .media-elements {
+            figure {
+              picture {
+                width: 470px;
+                height: 635px;
+              }
+            }
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+section.bs-section--careers-banner-type-one{
+  h1{
+    color: var(--black-pearl);
+  }
+  p{
+    padding-bottom: 17px;
+    line-height: 1.25;
+    color: var(--catalina-blue);
+  }
+  .bs-column--column-left{
+    padding-top: 6px;
+  }
+}
+
+@include media-breakpoint-only(xl) {
+  section.bs-section--careers-banner-type-one {
+    .media-elements {
+      height: 440px;
+    }.bs-column--column-left{
+      padding-right: 75px;
+    }
+    .bs-column--column-right{
+      padding: 100px 20px 36px 15px;
+    }
+  }
+}

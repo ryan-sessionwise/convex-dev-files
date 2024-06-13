@@ -1,0 +1,132 @@
+.bs-section--sassy-social-share{
+  .heateor_sss_sharing_container {
+    display: none;
+  }
+  .container{
+    position: relative;
+  }
+    // //social-share-plugin
+  .heateor_sss_sharing_container {
+    width: 16px !important;
+    padding: 9px 12px 12px !important;
+    box-shadow: 0 5px 10px 0 rgba(3, 19, 34, 0.08) !important;
+  }
+  .social-share {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    height: 100%;
+    .heateor_sss_vertical_sharing {
+      z-index: 1;
+      position: sticky;
+      left: auto !important;
+      padding-right: 0;
+      border-radius: 5px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 16px;
+        padding: 0 !important;
+        li {
+          margin-bottom: 16px !important;
+          &:last-of-type {
+            order: -1;
+          }
+          &:nth-last-child(2){
+            margin-bottom: 0 !important;
+          }
+          &::after {
+            display: none;
+          }
+          i.heateorSssSharing {
+            position: relative;
+            width: 16px !important;
+            height: 16px !important;
+            margin: 0 !important;
+            border-radius: 0 !important;
+            background-color: transparent;
+            pointer-events: none;
+            &:hover {
+              opacity: 0.5;
+            }
+            &:after {
+              @include icon-share;
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              display: block;
+            }
+            &.heateorSssEmailBackground{
+              pointer-events: visible;
+              &:after {
+                @include icon-mail;
+              }
+            }
+            &.heateorSssFacebookBackground {
+              pointer-events: visible;
+              &:after {
+                @include icon-facebook;
+              }
+            }
+            &.heateorSssTwitterBackground {
+              pointer-events: visible;
+              &:after {
+                @include icon-twitter;
+              }
+            }
+            &.heateorSssLinkedinBackground {
+              pointer-events: visible;
+              &:after {
+                @include icon-linkedin;
+              }
+            }
+            .heateorSssSharingSvg {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+    div.heateorSssSharingArrow {
+      display: none;
+    } 
+  }
+}
+div.heateor_sss_bottom_sharing{
+  display: none;
+}
+@include media-breakpoint-down(sm) {
+  .bs-section--sassy-social-share{
+    .social-share {
+      position: relative;
+      left: 0;
+      margin-bottom: 20px;
+      .heateor_sss_vertical_sharing {
+        width: 94% !important;
+        padding-right: 10px;
+        ul {
+          flex-direction: row;
+          justify-content: space-between;
+          width: 100%;
+          min-height: 100%;
+          li {
+            display: flex !important;
+            justify-content: center;
+            margin-bottom: 0 !important;
+            padding: 0px 10px !important;
+            i.heateorSssSharing {
+              margin: 0 !important;
+              &.heateorSssTwitterBackground {
+                &::after {
+                  top: 3px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

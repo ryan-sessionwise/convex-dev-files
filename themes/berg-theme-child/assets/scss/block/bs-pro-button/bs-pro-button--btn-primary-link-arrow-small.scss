@@ -1,0 +1,7 @@
+.bs-pro-button--btn-primary-link-arrow-small{
+	&.bs-pro-button{
+		a.bs-pro-button__container{
+			@extend %btn-primary-link-arrow-small;
+		}
+	}
+}

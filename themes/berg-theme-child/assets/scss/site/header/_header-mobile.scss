@@ -1,0 +1,110 @@
+.nav {
+  z-index: $z-index-header;
+  position: fixed;
+  top: 50px;
+  width: 100%;
+  background-color: var(--pure-white);
+  font-family: $font-avenir-medium;
+  transition: top 0.3s, background-color 0.3s;
+  .container {
+    padding: 0 10px;
+  }
+  .navbar {
+    display: grid;
+    grid-template-columns: 145px calc(100% - 145px);
+    &__logo {
+      display: none;
+      grid-row: 1 / 2;
+      .inactive-logo {
+        display: block;
+      }
+      .active-logo {
+        display: none;
+      }
+    }
+    &__top {
+      display: none;
+      #mega-menu-wrap-top-menu {
+        #mega-menu-top-menu {
+          li {
+            .mega-search-wrap {
+              margin-left: 25px;
+              .mega-search {
+                .search-icon {
+                  &:before {
+                    content: "";
+                  }
+                  &:after {
+                    @include sprite-search-icon-white;
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    right: 0;
+                    transition: all 0.3s;
+                  }
+                }
+              }
+              &:hover {
+                .mega-search {
+                  .search-icon {
+                    &:after {
+                      @include sprite-search-icon-blue;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .login {
+            > a {
+              position: relative;
+              padding-left: 20px;
+              &:before {
+                @include sprite-user-icon-white;
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: 0;
+              }
+            }
+            &:hover {
+              > a {
+                &:before {
+                  @include sprite-user-icon-blue;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &__main {
+      grid-column: 1 / 3;
+      #mega-menu-wrap-main-menu {
+        .mega-menu-toggle {
+          .mega-toggle-animated-inner,
+          .mega-toggle-animated-inner::before,
+          .mega-toggle-animated-inner::after {
+            height: 2px;
+            background-color: var(--cerulean);
+          }
+        }
+        .mega-search {
+          .search-icon {
+            &:before {
+              content: "";
+            }
+            &:after {
+              @include sprite-search-icon-blue;
+              content: "";
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              transform: scale(1.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

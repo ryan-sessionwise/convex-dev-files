@@ -1,0 +1,141 @@
+.bs-section--about-overview {
+  padding-top: 40px;
+  h2 {
+    margin-bottom: 15px;
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .media-elements {
+    picture {
+      height: 300px;
+      img {
+        @include image-fill(cover);
+        border-radius: 5px;
+      }
+    }
+    .common-video-popup {
+      &:hover {
+        a {
+          i,
+          &::after {
+            opacity: 0.8;
+          }
+        }
+      }
+      a {
+        &::after,
+        i {
+          position: absolute;
+          top: auto;
+          right: auto;
+          bottom: 22px;
+          left: 0;
+        }
+        i {
+          position: absolute;
+          top: auto;
+          right: auto;
+          left: 20px;
+          width: 30px;
+          height: 30px;
+          transform: scale(0.8);
+        }
+        &::after {
+          content: "Play Video";
+          left: 57px;
+          color: var(--pure-white);
+          font-size: $paragraph-sub-text;
+          font-family: $font-avenir-demi;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .bs-section--about-overview {
+    .media-elements {
+      picture {
+        height: 312px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--about-overview {
+    .media-elements {
+      picture {
+        height: 450px;
+      }
+      .common-video-popup {
+        a {
+          &::after,
+          i {
+            bottom: 40px;
+          }
+          i {
+            left: 40px;
+            transform: unset;
+          }
+          &::after {
+            left: 86px;
+            font-size: $paragraph-font-size;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--about-overview {
+    padding-top: 100px;
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin: 24px 0 0;
+    }
+    .bs-row {
+      align-items: center;
+    }
+    .media-elements {
+      picture {
+        height: 365px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .bs-section--about-overview {
+    .bs-column {
+      &:first-of-type {
+        padding: 6px 15px 0 45px;
+      }
+    }
+    .media-elements {
+      picture {
+        height: 450px;
+      }
+    }
+  }
+}
+
+//BE Style
+.bs-section--about-overview {
+  div[data-type="e25m/media-elements"] {
+    .media-elements {
+      .bs-common-image,
+      .common-video-popup {
+        picture {
+          //overwrite default style
+          height: 100% !important;
+          img {
+            //overwrite default style
+            object-fit: cover !important;
+          }
+        }
+      }
+    }
+  }
+}

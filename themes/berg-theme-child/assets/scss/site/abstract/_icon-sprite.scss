@@ -1,0 +1,143 @@
+// icon sprit common
+@mixin icon-sprite {
+  background-image: url($icon-sprite);
+  background-repeat: no-repeat;
+  background-size: 350px 350px;
+}
+// separate mixins
+@mixin sprite-user-icon-white {
+  @include icon-sprite;
+  width: 13px;
+  height: 13px;
+  background-position: -54px -15px;
+}
+@mixin sprite-user-icon-blue {
+  @include icon-sprite;
+  width: 13px;
+  height: 13px;
+  background-position: -54px -29px;
+}
+@mixin sprite-user-icon-black {
+  @include icon-sprite;
+  width: 13px;
+  height: 13px;
+  background-position: -54px -1px;
+}
+@mixin sprite-quote-icon-blue {
+  @include icon-sprite;
+  width: 8px;
+  height: 6px;
+  background-position: -82px -1px;
+}
+@mixin sprite-quote-icon-orange {
+  @include icon-sprite;
+  width: 10px;
+  height: 10px;
+  background-position: -96px -29px;
+}
+@mixin sprite-close-icon-black {
+  @include icon-sprite;
+  width: 6px;
+  height: 6px;
+  background-position: -91px -1px;
+}
+@mixin sprite-search-icon-white {
+  @include icon-sprite;
+  width: 13px;
+  height: 13px;
+  background-position: -68px -15px;
+}
+@mixin sprite-search-icon-blue {
+  @include icon-sprite;
+  width: 13px;
+  height: 13px;
+  background-position: -68px -29px;
+}
+@mixin sprite-search-icon-black {
+  @include icon-sprite;
+  width: 13px;
+  height: 13px;
+  background-position: -68px -1px;
+}
+@mixin sprite-orange-arrow-icon {
+  @include icon-sprite;
+  background-position: -28px -1px;
+  width: 25px;
+  height: 20px;
+}
+@mixin sprite-arrow-orange {
+  @include icon-sprite;
+  width: 13px;
+  height: 10px;
+  background-position: 1px 1px;
+}
+@mixin sprite-arrow-orange-dark {
+  @include icon-sprite;
+  width: 13px;
+  height: 10px;
+  background-position: -1px -10px;
+}
+@mixin sprite-arrow-white {
+  @include icon-sprite;
+  width: 15px;
+  height: 12px;
+  background-position: -12px -1px;
+}
+@mixin sprite-arrow-black {
+  @include icon-sprite;
+  width: 15px;
+  height: 12px;
+  background-position: -1px -55px;
+}
+@mixin sprite-search-icon-big {
+  @include icon-sprite;
+  width: 24px;
+  height: 22px;
+  background-position: -80px -7px;
+}
+@mixin sprite-white-arrow-icon-product {
+  @include icon-sprite;
+  background-position: 0px -35px;
+  width: 25px;
+  height: 20px;
+}
+@mixin icon-facebook {
+  @include icon-sprite;
+  background-position: -45px -44px;
+  width: 16px;
+  height: 16px;
+}
+@mixin icon-linkedin {
+  @include icon-sprite;
+  background-position: -79px -44px;
+  width: 16px;
+  height: 16px;
+}
+@mixin icon-mail {
+  @include icon-sprite;
+  background-position: -28px -44px;
+  width: 16px;
+  height: 13px;
+}
+@mixin icon-twitter {
+  @include icon-sprite;
+  background-position: -62px -44px;
+  width: 16px;
+  height: 14px;
+}
+@mixin icon-share {
+  @include icon-sprite;
+  background-position: -96px -44px;
+  width: 16px;
+  height: 16px;
+}
+@mixin orange-vector-round {
+  background-image: url($orange-vector);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+@mixin blue-vector-round {
+  background-image: url($blue-vector);
+  background-repeat: no-repeat;
+  background-position: top left;
+}

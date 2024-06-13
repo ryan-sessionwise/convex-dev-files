@@ -1,0 +1,226 @@
+.bs-section--careers-our-love {
+  position: relative;
+  padding: 25px 0 100px;
+  h2 {
+    margin-bottom: 45px;
+    padding: 0;
+    color: var(--black-pearl);
+  }
+  .bs-div--careers-our-love-slider {
+    @include border-radius(5px);
+    z-index: 1;
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+    background-color: var(--catalina-blue);
+    background-image: url($about-testimonial-mask);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: contain;
+    .bs-slider {
+      z-index: 10;
+      position: relative;
+      width: 100%;
+      .slick-slide-wrapper {
+        display: flex !important; //overriding inline css
+        flex-direction: column;
+        justify-content: space-between;
+        .bs-div--careers-our-love-slider-content {
+          width: 100%;
+          .wp-block-pullquote {
+            width: 100%;
+            margin: 0;
+            padding: 30px;
+            text-align: left;
+            &::before {
+              @include sprite-quote-icon-orange;
+              content: "";
+              position: absolute;
+              top: 13px;
+              left: 15px;
+              display: block;
+            }
+            p {
+              margin-bottom: 50px;
+              font-size: $blockquote-font-size;
+              line-height: normal;
+              font-family: $font-avenir-regular;
+              color: var(--pure-white);
+              &:nth-child(2) {
+                margin-bottom: 5px;
+                font-size: $h6-font-size;
+                font-family: $font-avenir-demi;
+                font-style: normal;
+              }
+            }
+            cite {
+              opacity: 0.75;
+              margin: 0;
+              font-size: $paragraph-sub-text;
+              font-family: $font-avenir-regular;
+              color: var(--pure-white);
+              font-style: normal;
+            }
+            blockquote {
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+        .bs-div--careers-our-love-slider-img {
+          width: 100%;
+          height: 424px;
+          margin-top: 0;
+          .bs-common-image {
+            width: 100%;
+            height: 100%;
+            .figure {
+              overflow: hidden;
+              width: 100%;
+              height: 100%;
+              border-radius: 5px;
+              picture {
+                width: 100%;
+                height: 100%;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .slick-dots {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: -20px;
+      padding-left: 20px;
+    }
+  }
+  .media-elements{
+    width: 100%;
+    height: 345px;
+  }
+}
+@include media-breakpoint-only(md){
+  .bs-section--careers-our-love{
+    .media-elements{
+      width: 292px;
+      height: 292px;
+    }
+  }
+}
+@include media-breakpoint-only(lg){
+  .bs-section--careers-our-love{
+    .media-elements{
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--careers-our-love {
+    padding: 25px 0 142px;
+    .bs-div--careers-our-love-slider {
+      z-index: 1;
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: auto;
+      padding-bottom: 80px;
+      .bs-slider {
+        width: 1200px;
+        .slick-slider {
+          height: auto;
+        }
+        .slick-slide-wrapper {
+          flex-direction: row;
+          .bs-div--careers-our-love-slider-content {
+            width: 706px;
+            .wp-block-pullquote {
+              width: 100%;
+              margin: 0;
+              padding: 85px 0px 80px 80px;
+              text-align: left;
+              &::before {
+                z-index: 10;
+                top: 3px;
+                left: 0;
+                margin: 86px 0 0 56px;
+              }
+            }
+          }
+          .bs-div--careers-our-love-slider-img {
+            width: 424px;
+            height: 427px;
+            margin-top: 63px;
+            margin-right: 10px;
+            margin-left: -130px;
+            .bs-common-image {
+              .figure {
+                picture {
+                  img {
+                    object-fit: scale-down;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .slick-dots {
+        position: relative;
+        justify-content: flex-end;
+        width: 706px;
+        margin-top: -198px;
+        margin-left: 10px;
+      }
+    }
+  }
+}
+@include media-breakpoint-only(xl){
+  .bs-section--careers-our-love{
+    .media-elements{
+      width: 425px;
+      height: 424px;
+    }
+  }
+}
+
+//BE styling
+div[data-type="e25m/section"] {
+  .bs-section--careers-our-love {
+    .bs-div--careers-our-love-slider {
+      .bs-slider {
+        width: 100% !important;
+        .slick-slide-wrapper {
+          flex-direction: row;
+          .bs-div--careers-our-love-slider-content {
+            width: 100% !important;
+            .wp-block-pullquote {
+              padding: 20px !important;
+              text-align: left;
+            }
+          }
+          .wp-block-pullquote {
+            &::before{
+              display: none !important;
+            }
+            p {
+              font-size: $list-font-size;
+            }
+          }
+          .bs-div--careers-our-love-slider-img {
+            width: 100%;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}

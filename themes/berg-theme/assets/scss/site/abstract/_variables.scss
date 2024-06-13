@@ -1,0 +1,51 @@
+$header-height: 100px;
+$footer-height: 300px;
+
+/******************
+    COLOR PALETTE
+ ******************/
+$colors: (
+    /*---------------------------       ----------------
+         COLOR VALUES FOR CODING             SET VALUES
+      -----------------------------       ---------------*/
+    /*  var(--white)                    	*/ --white: #ffffff,
+    /*  var(--black)                    	*/ --black: #000000,
+);
+
+/******************
+        FONTS
+ ******************/
+
+/*** Font family ***/
+$font_family_grotesk_regular: "HK Grotesk Regular", sans-serif;
+
+/*** Font sizes ***/
+$default-font-size: 16px;
+$h1-font-size: 2em;
+$h2-font-size: 1.8em;
+$h3-font-size: 1.6em;
+$h4-font-size: 1.4em;
+$h5-font-size: 1.2em;
+$h6-font-size: 1em;
+
+/*** Font weights ***/
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+/********************************
+    RESET BOOTSTRAP VARIABLES
+ ********************************/
+
+/*** Body ***/
+$body-color: var(--black) !default;
+$font-weight-base: $font-weight-regular !default;
+
+/*********************************************
+    SET VARIABLES FOR FILES AND FOLDER PATHS
+ **********************************************/
+
+/** Image Path **/
+$image-base-path: "../images/";

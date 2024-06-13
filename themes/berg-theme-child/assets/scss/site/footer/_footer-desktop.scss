@@ -1,0 +1,71 @@
+@include media-breakpoint-up(lg) {
+  footer {
+    padding: 100px 0;
+    .footer__wrapper {
+      grid-template-rows: 86px auto auto;
+      grid-template-areas:
+        "footer-logo footer-menus"
+        "footer-social footer-menus"
+        "footer-bottom footer-bottom";
+      .footer-menus {
+        justify-content: space-between;
+        > div {
+          width: 130px;
+          &:first-of-type {
+            width: 130px;
+          }
+        }
+      }
+      .footer-nav {
+        > li {
+          &.menu-item-has-children {
+            li {
+              &.news-events {
+                margin-top: 25px;
+                a {
+                  font-family: "Avenir Next LT Pro Demi";
+                  pointer-events: none !important;
+                }
+              }
+              &.resource-desktop-hide {
+                display: none;
+              }
+            }
+          }
+          &.heading {
+            > a {
+              pointer-events: none !important;
+            }
+          }
+          &.sub-heading {
+            > a {
+              pointer-events: none !important;
+            }
+          }
+        }
+        .sub-menu-wrapper {
+          max-height: 100%;
+        }
+        .dropdown {
+          display: none;
+        }
+      }
+      .footer-bottom {
+        display: flex;
+        padding-top: 10px;
+        column-gap: 50px;
+        ul {
+          justify-content: start;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  footer {
+    .footer__wrapper {
+      grid-template-columns: minmax(150px, 320px) auto;
+    }
+  }
+}

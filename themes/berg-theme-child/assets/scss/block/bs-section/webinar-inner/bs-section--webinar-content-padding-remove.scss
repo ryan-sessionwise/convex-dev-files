@@ -1,0 +1,7 @@
+@include media-breakpoint-up(xl) {
+  .bs-section--datasheet-inner-content {
+    &.bs-section--datasheet-inner-webinar-content {
+      padding-bottom: 14px;
+    }
+  }
+}

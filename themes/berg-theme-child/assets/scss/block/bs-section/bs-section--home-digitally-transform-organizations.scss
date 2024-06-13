@@ -1,0 +1,177 @@
+@keyframes progres {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.bs-section--home-digitally-transform-organizations {
+  padding: 50px 0 50px;
+  background-image: linear-gradient(to bottom, var(--overlay-light-blue), var(--alice-blue) 267%);
+  h2 {
+    margin-bottom: 0;
+    font-size: $h2-font-size;
+    line-height: 44px;
+    font-family: $font-avenir-medium;
+    color: var(--black-pearl);
+  }
+  .bs-slider-tabs {
+    margin-top: 47px;
+    .slick-arrow {
+      margin-top: -10px;
+      &.slick-prev {
+        margin-left: 20px;
+      }
+      &.slick-next {
+        margin-right: 20px;
+      }
+    }
+    .slick-list {
+      height: 50px;
+      margin: 0 20px 0 20px;
+      .slick-track {
+        display: flex;
+        justify-content: center;
+      }
+      .slick-slide {
+        position: relative;
+        width: 100%;
+        padding: 0 40px;
+        cursor: pointer;
+        &.slick-current {
+          .slick-slide-wrapper {
+            &.text-center {
+              h5 {
+                color: var(--cerulean);
+              }
+            }
+          }
+        }
+        .slick-slide-wrapper {
+          &.text-center {
+            h5 {
+              position: relative;
+              font-size: $paragraph-font-size;
+              line-height: normal;
+              font-family: $font-avenir-medium;
+              color: var(--catalina-blue);
+              font-style: normal;
+              &::after,
+              &::before {
+                @include after-before;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                transition: transform 0.5s;
+                transform-origin: right;
+              }
+              &::after {
+                height: 1px;
+                margin-top: 15px;
+                background-color: var(--very-light-blue);
+              }
+              &::before {
+                height: 3px;
+                margin-top: 16px;
+                background-color: none;
+                transform: scaleX(1);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .bs-slider-content {
+    margin-top: 40px;
+    .slick-slide {
+      width: 100%;
+      .bs-common-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        figure {
+          width: 100%;
+          max-width: 1086px;
+          picture {
+            width: 100%;
+            img {
+              width: 100% !important;
+              max-height: 460px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bs-section--home-digitally-transform-organizations {
+    padding: 100px 0 100px;
+    h2 {
+      line-height: normal;
+    }
+    .bs-slider-tabs {
+      .slick-arrow {
+        margin-top: -28px;
+        &.slick-prev {
+          top: 0;
+          left: 100%;
+          margin-left: -100px;
+        }
+        &.slick-next {
+          top: 0;
+          right: 0;
+          margin-top: -28px;
+          margin-right: -10px;
+        }
+      }
+      .slick-list {
+        margin: 0;
+        .slick-slide {
+          width: auto;
+          margin-right: 50px;
+          padding: 0;
+          .slick-slide-wrapper {
+            &.text-center {
+              text-align: left !important; //overide default style from bootstrap
+              h5 {
+                font-size: $h5-font-size;
+              }
+            }
+          }
+          &.slick-current {
+            .slick-slide-wrapper {
+              &.text-center {
+                h5 {
+                  color: var(--cerulean);
+                  &::before {
+                    @include gradient(254deg, var(--vivid-orange), var(--orange-red));
+                    animation: progres 5s;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// BE styles
+div[data-type="e25m/section"] {
+  .bs-section--home-digitally-transform-organizations {
+    .bs-slider-tabs {
+      .slick-list {
+        height: auto;
+      }
+    }
+    .wp-block[data-type="e25m/tab-slider-v2"] .bs-tab-slider > .bs-slider-tabs .slick-slide > div {
+      height: 150px;
+    }
+  }
+}

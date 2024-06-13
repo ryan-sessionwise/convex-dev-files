@@ -1,0 +1,21 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+@import "../../../theme-defaults.scss";
+
+$EDITOR__post-block-border-color: $EDITOR-PRIMARY-COLOR;
+
+.berg-classic-theme {
+  .wp-block[data-type="e25m/single-post"] {
+    @include image-classic-view();
+    border: 5px solid $EDITOR__post-block-border-color;
+    .bs-post {
+      &__details {
+        padding: 5px;
+      }
+    }
+  }
+}

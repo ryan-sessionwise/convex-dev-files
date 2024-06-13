@@ -1,0 +1,102 @@
+.bs-section--about-convex-learn-more{
+  padding: 20px 0 20px;
+  background: linear-gradient(180deg, 
+  rgba(234,246,255,0.5) 0%, 
+  rgba(234,246,255,0) 50%, 
+  rgba(234,246,255,0) 100%);
+  h2{
+    margin: 0;
+    padding-bottom: 40px;
+    font-family:$font-avenir-medium;
+    color: var(--black-pearl);
+  }
+  .bs-blurb{
+    $this: ".bs-blurb";
+    padding-bottom: 35px;
+    #{$this}__image{
+      padding-bottom: 17px;
+      figure{
+        width: 34px;
+        height: 34px;
+        margin: 0;
+        img{
+          @include image-fill(scale-down);
+        }
+      }
+    }
+    #{$this}__title{
+      padding-bottom: 13px;
+      h3,
+      h4,
+      h5{
+        @include heading4;
+        margin: 0;
+        line-height: 1.15;
+        font-family: $font-avenir-demi;
+        color: var(--black-pearl);
+      }
+    }
+    #{$this}__description{
+      padding-bottom: 21px;
+      p{
+        margin: 0;
+        font-size: $paragraph-font-size-mobile;
+        line-height: 18px;
+        color: var(--catalina-blue);
+      }
+    }
+    #{$this}__read-more{
+      span{
+        @extend %btn-primary-link-arrow-small;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md){
+  .bs-section--about-convex-learn-more{
+    h2{
+      padding-bottom: 77px;
+    }
+    .bs-column--custom-flex{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 35px;
+    }
+    .bs-blurb{
+      $this: ".bs-blurb";
+      padding-bottom: 63px;
+      #{$this}__description{
+        padding-bottom: 31px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .bs-section--about-convex-learn-more{
+    .bs-column--custom-flex{
+      column-gap: 50px;
+    }
+  }
+}
+@include media-breakpoint-up(xl){
+  .bs-section--about-convex-learn-more{
+    padding: 30px 0;
+    .bs-column--custom-flex{
+      column-gap: 135px;
+    }
+  }
+}
+// BE styles 
+div[data-type="e25m/section"]{
+  .bs-section--about-convex-learn-more{
+    .bs-column--custom-flex{
+      display: flex !important;
+    }
+    div[data-type="e25m/blurb"]{
+      display: inline-block;
+      width: 33.33%;
+      vertical-align: top;
+    }
+  }
+}

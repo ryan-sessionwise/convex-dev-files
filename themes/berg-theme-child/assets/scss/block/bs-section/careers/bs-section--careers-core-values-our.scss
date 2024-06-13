@@ -1,0 +1,338 @@
+.bs-section--careers-core-values-our {
+  padding: 0 0 40px;
+  .container {
+    padding: 15px;
+  }
+  .bs-row--fluid-container-normal-row-left {
+    .bs-column--core-values {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .bs-div--aboutus-our-core-values-content {
+        width: 100%;
+        .bs-div--our-core-values-heading {
+          margin: 0 0 35px;
+          h2 {
+            margin-bottom: 20px;
+            padding: 0;
+            color: var(--black-pearl);
+          }
+          p {
+            font-size: $h5-font-size;
+            line-height: normal;
+            color: var(--catalina-blue);
+          }
+        }
+        .bs-div__inner {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width: 100%;
+        }
+        .bs-card {
+          width: 100%;
+          margin-bottom: 50px;
+          &:nth-child(even) {
+            margin-right: auto;
+          }
+          .bs-card__image {
+            width: 34px;
+            height: 34px;
+            margin-bottom: 15px;
+            figure,
+            picture {
+              width: 100%;
+              height: 100%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: scale-down;
+              }
+            }
+          }
+          .bs-card__title {
+            h4 {
+              margin: 0;
+              padding: 0;
+              line-height: 1.15;
+              color: var(--black-pearl);
+              letter-spacing: -1px;
+            }
+          }
+          .bs-card__description {
+            margin-top: 15px;
+            line-height: normal;
+            p {
+              margin: 0;
+              padding: 0;
+              font-size: 14px;
+              line-height: normal;
+              color: var(--catalina-blue);
+            }
+          }
+        }
+      }
+      .bs-div--aboutus-our-core-values-image {
+        width: 100%;
+        margin-top: 0;
+        .bs-common-image {
+          .figure {
+            picture {
+              width: 100%;
+              height: auto;
+              img {
+                width: 100%;
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bs-section--careers-core-values-our {
+    padding: 50px 0 76px;
+    &.bs-section--career-core-values {
+      .bs-row--fluid-container-normal-row-left {
+        .bs-div--aboutus-our-core-values-content {
+          .bs-div--our-core-values-heading {
+            margin-top: 25px;
+          }
+        }
+        .bs-div--aboutus-our-core-values-image {
+          position: relative;
+          width: 45%;
+          height: 700px;
+          margin-top: 60px;
+          .bs-common-image {
+            z-index: 10;
+            position: relative;
+            width: 85%;
+            height: 540px;
+            margin-left: -55px;
+            .figure {
+              width: 100%;
+              height: 100%;
+              picture {
+                width: 100%;
+                height: 100%;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                  border-top-left-radius: 5px;
+                  border-top-right-radius: 0;
+                  border-bottom-left-radius: 5px;
+                  border-bottom-right-radius: 0;
+                }
+              }
+            }
+          }
+          .bs-div--our-core-values-placeholder {
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45%;
+            height: 620px;
+            margin-top: 78px;
+            background-color: var(--very-light-blue);
+          }
+        }
+      }
+      &.bs-section--career-core-values-right {
+        .bs-row--fluid-container-normal-row-left {
+          margin: 0 0;
+          padding-left: 0;
+          .bs-column--core-values {
+            flex-direction: row-reverse !important;
+            justify-content: flex-end;
+            padding-right: 15px;
+            column-gap: 60px;
+            .bs-div--aboutus-our-core-values-content {
+              .bs-div--our-core-values-heading {
+                margin-top: 0;
+              }
+              .bs-div__inner {
+                &::after {
+                  display: none;
+                }
+              }
+            }
+            .bs-div--aboutus-our-core-values-image {
+              width: 605px;
+              .bs-common-image {
+                float: right;
+                margin-top: -5px;
+                .figure {
+                  picture {
+                    img {
+                      border-top-left-radius: 0;
+                      border-top-right-radius: 5px;
+                      border-bottom-left-radius: 0;
+                      border-bottom-right-radius: 5px;
+                    }
+                  }
+                }
+              }
+              .bs-div--our-core-values-placeholder {
+                left: 0;
+              }
+            }
+            .bs-div--our-core-values-placeholder {
+              height: 639px;
+            }
+          }
+        }
+      }
+    }
+    .container {
+      max-width: 100%;
+      padding: 0;
+    }
+    .bs-row--fluid-container-normal-row-left {
+      margin: 0 0 0 12px;
+      .bs-column--core-values {
+        flex-direction: row;
+        padding: 0;
+        padding-right: 0;
+        .bs-div--aboutus-our-core-values-content {
+          width: 45%;
+          .bs-card {
+            width: 45%;
+          }
+        }
+        .bs-div--aboutus-our-core-values-image {
+          width: 45%;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bs-section--careers-core-values-our {
+    &.bs-section--career-core-values {
+      .bs-row--fluid-container-normal-row-left {
+        .bs-div--aboutus-our-core-values-image {
+          width: 605px;
+          .bs-common-image {
+            width: 470px;
+          }
+          .bs-div--our-core-values-placeholder {
+            width: 405px;
+          }
+        }
+      }
+      &.bs-section--career-core-values-right {
+        .bs-row--fluid-container-normal-row-left {
+          .bs-column--core-values {
+            padding: 0;
+            padding-right: 35px;
+            column-gap: 130px;
+          }
+        }
+      }
+    }
+    .bs-row--fluid-container-normal-row-left {
+      .bs-column--core-values {
+        .bs-div--aboutus-our-core-values-content {
+          width: 570px;
+          padding-left: 0;
+          .bs-card {
+            width: 260px;
+          }
+        }
+        .bs-div--aboutus-our-core-values-image {
+          width: 550px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1445px) {
+  .bs-section--careers-core-values-our {
+    .container {
+      padding: 15px;
+      max-width: 1200px;
+    }
+    .bs-row--fluid-container-normal-row-left {
+      padding-left: 0;
+      .bs-column--core-values {
+        column-gap: 90px;
+      }
+    }
+    &.bs-section--career-core-values-right {
+      .bs-row--fluid-container-normal-row-left {
+        padding: 0 15px;
+        .bs-div--aboutus-our-core-values-content {
+          .bs-card {
+            width: 235px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// BE styles
+div[data-type="e25m/section"] {
+  .bs-section--careers-core-values-our {
+    .bs-row--fluid-container-normal-row-left {
+      padding-left: 0 !important;
+      .bs-column--core-values {
+        display: flex !important;
+        .bs-div--aboutus-our-core-values-content {
+          display: flex;
+          float: left;
+          width: 45% !important;
+          div[data-type="e25m/card"] {
+            display: inline-block;
+            width: 45%;
+            margin-right: 10px;
+            margin-bottom: 10px !important;
+            vertical-align: top;
+            .bs-card {
+              width: 100%;
+              height: 250px;
+              margin-bottom: 0 !important;
+              .bs-card__title {
+                h4 {
+                  display: inline-block;
+                  width: 100%;
+                  font-size: $paragraph-font-size;
+                }
+              }
+              .bs-card__subtitle {
+                display: none;
+              }
+              .bs-card__image {
+                width: 100%;
+                figure {
+                  float: left;
+                  width: 34px;
+                  background-color: var(--pure-white);
+                }
+                .image-remove {
+                  float: right;
+                }
+              }
+            }
+          }
+        }
+        .bs-div--aboutus-our-core-values-image {
+          float: right !important;
+          width: 45% !important;
+          .bs-div--our-core-values-placeholder {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

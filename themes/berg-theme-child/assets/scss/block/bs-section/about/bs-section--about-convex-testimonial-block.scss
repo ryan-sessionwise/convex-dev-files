@@ -1,0 +1,168 @@
+.bs-section--about-convex-testimonial-block{
+  padding: 25px 0;
+  background: linear-gradient(180deg, 
+  rgba(234,246,255,0) 0%, 
+  rgba(234,246,255,0) 44%, 
+  rgba(234,246,255,1) 44%, 
+  rgba(234,246,255,0.5) 100%);
+  .bs-column{
+    position: relative;
+  }
+  .wp-block-pullquote{
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 30px 30px 25px 10px;
+    border-radius: 5px;
+    text-align: left;
+    &::after,
+    &::before{
+      @include after-before;
+      z-index: $z-index-zero;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+    }
+    &::before{
+      height: 100%;
+      border-radius: 5px;
+      background-color: var(--catalina-blue);
+    }
+    &::after{
+      height: 88%;
+      background: url($about-testimonial-mask);
+      background-repeat: no-repeat;
+      background-position: bottom right ;
+      background-size: contain;
+    }
+    blockquote{
+      z-index: $z-index-one;
+      position: relative;
+      max-width: 100%;
+      margin: 0;
+      padding-left: 20px;
+      &::before{
+        content: open-quote;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: $blockquote-font-size;
+        line-height: normal;
+        font-family: $font-avenir-regular;
+        color: var(--orange-red);
+      }
+      p{
+        margin: 0;
+        padding-bottom: 0;
+        font-size: $paragraph-font-size;
+        line-height: normal;
+        font-family: $font-avenir-demi;
+        text-align: left;
+        color: var(--pure-white);
+        &:first-child{
+          padding-bottom: 50px;
+          font-size: $blockquote-font-size;
+          line-height: 1.25;
+          font-family: $font-avenir-regular;
+          text-align: left;
+          color: var(--pure-white);
+        }
+      }
+      cite{
+        display: block;
+        width: 100%;
+        font-size: $paragraph-sub-text;
+        font-family: $font-avenir-regular;
+        color: var(--pure-white);
+      }
+    }
+  }
+  .media-elements{
+    width: 100%;
+    height: 345px;
+    .bs-common-image,
+    .figure,
+    picture,
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .bs-common-image{
+      .figure{
+        overflow: hidden;
+        border-radius: 5px;
+        picture{
+          img{
+            object-fit: cover;
+            object-position: top;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md){
+  .bs-section--about-convex-testimonial-block{
+    padding: 35px 0;
+    .bs-column{
+      padding-bottom: 71px;
+    }
+    .wp-block-pullquote{
+      width: calc(83.333% + 26px);
+      padding: 40px 40px 35px 20px;
+      blockquote{
+        max-width: 75%;
+      }
+    }
+    .media-elements{
+      position: absolute;
+      right: -4px;
+      bottom: 0;
+      width: 292px;
+      height: 292px;
+    }
+  }
+}
+@include media-breakpoint-only(lg){
+  .bs-section--about-convex-testimonial-block{
+    padding: 40px 0;
+    .wp-block-pullquote{
+      padding: 65px 65px 60px 35px;
+    }
+    .media-elements{
+      width: 400px;
+      height: 400px;
+    }
+  }
+}
+@include media-breakpoint-only(xl){
+  .bs-section--about-convex-testimonial-block{
+    padding: 27px 0 50px;
+    .wp-block-pullquote{
+      padding: 83px 80px 74px 60px;
+    }
+    .media-elements{
+      width: 425px;
+      height: 424px;
+    }
+  }
+}
+// BE styles 
+div[data-type="e25m/section"]{
+  .bs-section--about-convex-testimonial-block{
+    .media-elements{
+      position: relative;
+      height: 300px;
+    }
+    .wp-block-pullquote{
+      background-color: var(--catalina-blue);
+      *{
+        color: var(--pure-white) !important;
+      }
+      &::after,
+      &::before{
+        display: none;
+      }
+    }
+  }
+}

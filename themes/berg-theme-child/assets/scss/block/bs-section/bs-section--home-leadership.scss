@@ -1,0 +1,429 @@
+.bs-section--home-leadership {
+  margin-bottom: 30px;
+  h2 {
+    margin-bottom: 50px;
+    padding: 0;
+    font-size: $h3-font-size;
+    font-family: $font-avenir-medium;
+  }
+  .bs-column--home-leadership {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    .bs-post {
+      @include border-radius(5px);
+      overflow: hidden;
+      position: relative;
+      transition: all 0.3s;
+      &:hover img {
+        transform: scale(1.1);
+      }
+      &::after {
+        @include border-radius(5px);
+        z-index: $z-index-one;
+        content: "";
+        // visibility: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--overlay-black);
+        transition: all 0.5s;
+      }
+      // &:hover {
+      //   &::after {
+      //     visibility: visible;
+      //   }
+      // }
+      .bs-post__category {
+        margin-bottom: 10px;
+        span {
+          font-size: $paragraph-sub-text;
+          font-family: $font-avenir-demi;
+          color: var(--pure-white);
+          letter-spacing: 1px;
+        }
+      }
+      .bs-post__inner {
+        figure {
+          width: 100%;
+          height: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s;
+            object-fit: scale-down;
+          }
+        }
+        .bs-post__title {
+          line-height: 1.38;
+          h3 {
+            font-size: $h5-font-size;
+            font-family: $font-avenir-medium;
+            color: var(--black-pearl);
+          }
+        }
+        .bs-post__category {
+          span {
+            text-transform: uppercase;
+          }
+        }
+        .bs-post__details {
+          z-index: 10;
+          position: relative;
+        }
+        .bs-post__learn-more {
+          .learn-more-text {
+            font-size: $list-font-size;
+            font-family: $font-avenir-demi;
+            color: var(--orange-red);
+          }
+        }
+      }
+    }
+    .bs-single-post--home-leadership-post-1 {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      margin-bottom: 10px;
+      .bs-post__trigger {
+        z-index: $z-index-two;
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+      }
+      .bs-post__inner {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        height: 100%;
+        .bs-post__details {
+          padding: 0 40px 40px 40px;
+          .bs-post__title {
+            h3 {
+              color: var(--pure-white);
+              transition: all 0.3s;
+            }
+          }
+        }
+        .bs-post__image {
+          z-index: $z-index-one;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          figure {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+    .bs-single-post--home-leadership-post-2 {
+      width: 100%;
+      height: auto;
+      margin: 0 0 10px 0px;
+      &::after {
+        display: none;
+      }
+      .bs-post__inner {
+        .bs-post__category {
+          span {
+            color: var(--black-pearl);
+          }
+        }
+        .bs-post__image {
+          margin-bottom: 0;
+        }
+        .bs-post__details {
+          padding: 0 40px 40px 40px;
+        }
+        .bs-post__learn-more {
+          margin-top: 13px;
+        }
+      }
+    }
+    .bs-single-post--home-leadership-post-3 {
+      display: flex;
+      align-items: flex-end;
+      width: 100%;
+      height: 300px;
+      .bs-post__trigger {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+      }
+      .bs-post__inner {
+        .bs-post__details {
+          z-index: $z-index-two;
+          padding: 0 40px 40px 40px;
+          .bs-post__category{
+            margin-bottom: 0;
+          }
+        }
+        .bs-post__image {
+          z-index: $z-index-one;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          figure {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+        .bs-post__title {
+          h3 {
+            color: var(--pure-white);
+            transition: all 0.3s;
+          }
+        }
+      }
+    }
+    .bs-single-post--home-leadership-post-4 {
+      overflow: hidden;
+      width: 100%;
+      height: auto;
+      margin-top: 10px;
+      &::after {
+        display: none;
+      }
+      .bs-post__inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: inherit;
+        .bs-post__category {
+          span {
+            color: var(--black-pearl);
+          }
+        }
+        .bs-post__image {
+          width: 100%;
+          height: 200px;
+          figure {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              transition: transform 0.2s;
+              object-fit: cover;
+            }
+          }
+        }
+        .bs-post__details {
+          width: 100%;
+          margin-top: 20px;
+          margin-bottom: 40px;
+          padding: 0 40px 0 40px;
+          .bs-post__description {
+            p {
+              color: var(--catalina-blue);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--home-leadership {
+    margin-bottom: 100px;
+    h2 {
+      font-size: $h2-font-size;
+    }
+    .bs-column--home-leadership {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .bs-single-post--home-leadership-post-1 {
+        width: 60%;
+        height: 559px;
+      }
+      .bs-single-post--home-leadership-post-2 {
+        width: 38%;
+        height: 559px;
+        margin: 0 0 10px 10px;
+        .bs-post__inner {
+          .bs-post__details {
+            padding: 30px 40px 40px 40px;
+          }
+        }
+      }
+      .bs-single-post--home-leadership-post-3 {
+        width: 38%;
+        height: 400px;
+      }
+      .bs-single-post--home-leadership-post-4 {
+        width: 60%;
+        height: 400px;
+        margin: 0 0 0 10px;
+        a {
+          overflow: hidden;
+          height: 100%;
+        }
+        .bs-post__inner {
+          display: flex;
+          flex-direction: row;
+          height: 100%;
+          min-height: 100%;
+          .bs-post__image {
+            width: 50%;
+            height: 100%;
+            figure {
+              width: 100%;
+              height: 100%;
+              margin-top: 0;
+            }
+          }
+          .bs-post__details {
+            width: 50%;
+            margin-bottom: 0;
+            .bs-post__description {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .bs-section--home-leadership {
+    .bs-column--home-leadership {
+      .bs-single-post--home-leadership-post-1 {
+        width: 770px;
+        height: 559px;
+        .bs-post__inner {
+          .bs-post__title {
+            line-height: 1.38;
+            h3 {
+              font-size: $h3-font-size;
+            }
+          }
+          .bs-post__details {
+            padding: 0 200px 40px 40px;
+          }
+        }
+      }
+      .bs-single-post--home-leadership-post-2 {
+        width: 390px;
+        height: 559px;
+        margin: 0 0 10px 10px;
+        .bs-post__inner {
+          .bs-post__details {
+            padding: 33px 40px 40px 40px;
+          }
+          .bs-post__title {
+            line-height: 1.38;
+            h3 {
+              font-size: $h3-font-size;
+              line-height: 1.13;
+              letter-spacing: -1px;
+            }
+          }
+          .bs-post__category {
+            margin-top: 0px;
+          }
+        }
+      }
+      .bs-single-post--home-leadership-post-3 {
+        width: 390px;
+        height: 559px;
+        .bs-post__inner {
+          .bs-post__title {
+            line-height: 1.38;
+            h3 {
+              font-size: $h3-font-size;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+      .bs-single-post--home-leadership-post-4 {
+        width: 770px;
+        height: 559px;
+        margin: 0 0 0 10px;
+        margin-top: 0;
+        .bs-post__inner {
+          .bs-post__details {
+            margin-top: -11px;
+            padding-right: 0;
+            padding-left: 36px;
+          }
+          .bs-post__title {
+            margin-bottom: 22px;
+            line-height: 1.38;
+            h3 {
+              font-size: $h3-font-size;
+              line-height: 1.13;
+              letter-spacing: -1px;
+            }
+          }
+          .bs-post__image {
+            width: 380px;
+            figure {
+              margin-top: 0;
+            }
+          }
+          .bs-post__details {
+            width: 380px;
+            .bs-post__description {
+              margin-top: 0px;
+              line-height: 26px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// BE styles
+div[data-type="e25m/section"] {
+  .bs-section--home-leadership {
+    .wp-block[data-type="e25m/column"]{
+      & > .block-editor-inner-blocks{
+        width: 100%;
+      }
+      .wp-block[data-type="e25m-custom/single-post-pro"]{
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        .bs-single-post---default{
+          width: 100% !important;
+        }
+      }
+    }
+    .block-editor-block-list__layout {
+      .bs-single-post--home-leadership-post-1 {
+        .bs-post__title {
+          h3 {
+            color: var(--pure-white) !important;
+          }
+        }
+      }
+      .bs-single-post--home-leadership-post-3 {
+        .bs-post__title {
+          h3 {
+            color: var(--pure-white) !important;
+          }
+        }
+      }
+    }
+  }
+}

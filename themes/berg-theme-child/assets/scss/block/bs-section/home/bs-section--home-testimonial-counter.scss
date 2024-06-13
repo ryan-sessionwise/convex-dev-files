@@ -1,0 +1,277 @@
+.bs-section--home-testimonial-counter {
+  padding: 50px 0 30px 0;
+  h2,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  .bs-column {
+    &:first-of-type {
+      order: 2;
+    }
+    &:last-of-type {
+      order: 1;
+      margin-left: 75px;
+      & > .bs-div {
+        padding-bottom: 23px;
+      }
+    }
+  }
+  .bs-slider {
+    position: relative;
+    .slick-slide {
+      .slick-slide-wrapper {
+        .bs-div {
+          &.bs-div--testimonial-quote {
+            p {
+              position: relative;
+              padding-left: 17px;
+              line-height: 1.5;
+              font-size: $h5-mobile-font-size;
+              color: var(--catalina-blue);
+              &::before,
+              &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+              }
+              &::before {
+                @include sprite-quote-icon-blue;
+                top: 3px;
+                left: 2px;
+              }
+              &::after {
+                @include sprite-close-icon-black;
+                bottom: 14px;
+                margin-left: 1px;
+              }
+            }
+            .bs-div__inner {
+              padding-bottom: 17px;
+              .media-elements {
+                padding-bottom: 30px;
+                picture {
+                  width: 199px;
+                  height: 34px;
+                  object-fit: contain;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bs-counter {
+    margin-bottom: 35px;
+    &:first-of-type{
+      .bs-counter__postfix{
+        margin-left: 10px;
+      }
+    }
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    $this: ".bs-counter";
+    #{$this}__container {
+      display: flex;
+      position: relative;
+      flex-wrap: wrap;
+      > div {
+        float: none;
+        text-align: left;
+      }
+      #{$this}__prefix {
+        position: absolute;
+        top: 13px;
+        left: -70px;
+        order: 1;
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+        }
+      }
+      #{$this}__postfix,
+      #{$this}__count {
+        display: inline-block;
+        span,
+        p {
+          line-height: 1;
+          font-size: $h3-font-size;
+          font-family: $font-avenir-demi;
+          color: var(--black-pearl);
+          font-size: $h3-font-size;
+          font-family: $font-avenir-demi;
+          letter-spacing: -1px;
+        }
+      }
+      #{$this}__count {
+        order: 2;
+      }
+      #{$this}__postfix {
+        order: 3;
+      }
+      #{$this}__title {
+        order: 4;
+        padding-bottom: 7px;
+        h2 {
+          @include heading6;
+          line-height: 1;
+          color: var(--black-pearl);
+        }
+      }
+      #{$this}__summary {
+        order: 5;
+        padding-bottom: 8px;
+        p {
+          line-height: 1;
+          font-size: $paragraph-sub-text;
+          color: var(--catalina-blue);
+          font-size: $paragraph-sub-text;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--home-testimonial-counter {
+    padding: 39px 0 92px 0;
+    .bs-slider {
+      .slick-slide {
+        .slick-slide-wrapper {
+          .bs-div {
+            &.bs-div--testimonial-quote {
+              p {
+                padding-left: 24px;
+                line-height: 24px;
+                font-size: $h5-font-size;
+              }
+              .bs-div__inner {
+                padding-bottom: 48px;
+                .media-elements {
+                  padding-bottom: 54px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .slick-dots {
+      position: absolute;
+      right: 0;
+      bottom: 12px;
+      width: auto;
+    }
+    .bs-column {
+      &:first-of-type {
+        order: 1;
+        padding-top: 40px;
+      }
+      &:last-of-type {
+        order: 2;
+        margin-left: 0;
+        & > .bs-div {
+          padding-top: 23px;
+          padding-left: 90px;
+          border-left: 1px solid var(--very-light-blue);
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--home-testimonial-counter {
+    .bs-slider {
+      .slick-slide {
+        .slick-slide-wrapper {
+          .bs-div {
+            &.bs-div--testimonial-quote {
+              p {
+                padding-right: 60px;
+              }
+            }
+            &.bs-div--testimonial-author {
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+    .bs-column {
+      &:last-of-type {
+        & > .bs-div {
+          padding-left: 171px;
+        }
+      }
+    }
+    .slick-dots {
+      right: 58px;
+    }
+  }
+}
+
+.bs-section--home-testimonial-counter {
+  div[data-type="e25m/column"] {
+    .slick-arrow {
+      &::before {
+        display: none !important;
+      }
+    }
+    &:last-of-type {
+      order: 2;
+      .block-editor-inner-blocks,
+      .block-editor-block-list__layout {
+        div[data-type="e25m/div"] {
+          & > .bs-div {
+            padding-left: 73px;
+          }
+        }
+      }
+      div[data-type="e25m/div"] {
+        width: 80% !important;
+      }
+    }
+    &:first-of-type {
+      order: 1;
+    }
+  }
+  div[data-type="e25m/counter"] {
+    width: 300px !important;
+  }
+  div[data-type="e25m/media-elements"] {
+    .bs-common-image {
+      padding: 0;
+    }
+  }
+  div[data-type="e25m/slider-v2"] {
+    div[data-type="e25m/media-elements"] {
+      height: 200px !important;
+      .media-elements {
+        padding-bottom: 0 !important;
+        figure {
+          height: 100px;
+        }
+      }
+    }
+    .bs-common-image {
+      padding: 0;
+    }
+  }
+  div[data-type="e25m/slider-v2-tab"] {
+    .bs-div--testimonial-quote {
+      p {
+        padding: 5px !important;
+        font-size: 12px !important;
+        line-height: 1 !important;
+        &::after,
+        &::before {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

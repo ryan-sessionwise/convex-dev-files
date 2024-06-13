@@ -1,0 +1,128 @@
+.bs-section--home-award {
+  padding: 50px 0;
+  h2 {
+    padding-bottom: 15px;
+  }
+  .bs-column {
+    .bs-blurb {
+      $this: ".bs-blurb";
+      &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        #{$this}__image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 270px;
+          height: 235px;
+          border-radius: 4px;
+          background-color: var(--shuttle-grey-transparent);
+          figure {
+            width: 200px;
+            height: 182px;
+            margin: 0;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: scale-down;
+            }
+          }
+        }
+        #{$this}__title {
+          width: 270px;
+          padding: 10px 21px 0 21px;
+          margin-bottom: 10px;
+          h5 {
+            line-height: 1.2;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .bs-section--home-award {
+    .bs-column {
+      .bs-blurb {
+        $this: ".bs-blurb";
+        &__container {
+          #{$this}__image,
+          #{$this}__title {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--home-award {
+    .bs-column {
+      .bs-blurb {
+        $this: ".bs-blurb";
+        &__container {
+          #{$this}__image {
+            height: 150px;
+            figure {
+              width: 120px;
+              height: 101px;
+            }
+          }
+          #{$this}__title {
+            padding: 10px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bs-section--home-award {
+    padding: 115px 0 106px 0;
+    h2 {
+      padding-bottom: 38px;
+    }
+    .bs-column {
+      .bs-blurb {
+        $this: ".bs-blurb";
+        &__container {
+          #{$this}__image {
+            width: 225px;
+            height: 210px;
+            figure {
+              height: 182px;
+              width: 170px;
+            }
+          }
+          #{$this}__title {
+            padding: 28px 21px 0 21px;
+            h5 {
+              line-height: 1.2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .bs-section--home-award {
+    .bs-column {
+      .bs-blurb {
+        $this: ".bs-blurb";
+        &__container {
+          #{$this}__image {
+            width: 270px;
+            height: 235px;
+            figure {
+              width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

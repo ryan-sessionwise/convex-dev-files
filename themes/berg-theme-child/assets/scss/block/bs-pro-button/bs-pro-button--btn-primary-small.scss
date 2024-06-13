@@ -1,0 +1,9 @@
+.bs-pro-button--btn-primary-small {
+	&.bs-pro-button {
+		a.bs-pro-button__container {
+			@extend %btn-primary;
+			padding: 7px 8px 4px 9px;
+			font-size: 12px;
+		}
+	}
+}

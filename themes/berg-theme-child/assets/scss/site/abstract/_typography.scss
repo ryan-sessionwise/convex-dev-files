@@ -1,0 +1,105 @@
+body {
+  font-weight: $font-weight-regular;
+  font-size: $paragraph-font-size;
+  line-height: 24px;
+  font-family: $font-avenir-regular;
+  color: var(--black-pearl);
+  letter-spacing: 0;
+}
+@mixin heading1 {
+  font-weight: $font-weight-regular;
+  font-size: $h1-mobile-font-size;
+  font-family: $font-avenir-bold;
+  letter-spacing: -1px;
+  @include media-breakpoint-up(lg) {
+    font-size: $h1-font-size;
+    line-height: 64px;
+  }
+}
+@mixin heading2 {
+  font-weight: $font-weight-regular;
+  font-size: $h2-mobile-font-size;
+  line-height: normal;
+  font-family: $font-avenir-medium;
+  @include media-breakpoint-up(lg) {
+    font-size: $h2-font-size;
+  }
+}
+@mixin heading3 {
+  font-weight: $font-weight-regular;
+  font-size: $h3-mobile-font-size;
+  font-family: $font-avenir-medium;
+  color: var(--black-pearl);
+  @include media-breakpoint-up(lg) {
+    font-size: $h3-font-size;
+    line-height: 34px;
+  }
+}
+@mixin heading4 {
+  font-weight: $font-weight-regular;
+  font-size: $h4-mobile-font-size;
+  font-family: $font-avenir-demi;
+  @include media-breakpoint-up(lg) {
+    font-size: $h4-font-size;
+    line-height: 30px;
+  }
+}
+@mixin heading5 {
+  font-weight: $font-weight-regular;
+  font-size: $h5-mobile-font-size;
+  font-family: $font-avenir-demi;
+  letter-spacing: 0;
+  @include media-breakpoint-up(lg) {
+    font-size: $h5-font-size;
+    line-height: 30px;
+  }
+}
+@mixin heading6 {
+  font-weight: $font-weight-regular;
+  font-size: $h6-mobile-font-size;
+  font-family: $font-avenir-medium;
+  letter-spacing: 0;
+  @include media-breakpoint-up(lg) {
+    font-size: $h6-font-size;
+  }
+}
+@mixin body {
+  font-weight: $font-weight-regular;
+  font-size: $paragraph-font-size;
+  line-height: 24px;
+  font-family: $font-avenir-regular;
+  color: var(--catalina-blue);
+}
+
+h1 {
+  @include heading1;
+}
+h2 {
+  @include heading2;
+}
+h3 {
+  @include heading3;
+}
+h4 {
+  @include heading4;
+}
+h5 {
+  @include heading5;
+}
+h6 {
+  @include heading6;
+}
+p,
+ul li,
+ol li,
+pre {
+  font-weight: $font-weight-regular;
+  font-size: $paragraph-font-size;
+  line-height: 20px;
+  font-family: $font-avenir-regular;
+}
+p a {
+  font-weight: $font-weight-regular;
+  color: var(--nasty-green);
+  text-decoration: none;
+}

@@ -1,0 +1,16 @@
+.bs-section--news-and-press-past-events {
+  margin-top: -10px;
+  padding-top: 45px;
+  background-image: linear-gradient(to top, rgba(234, 246, 255, 0), var(--alice-blue) 120%);
+  .bs-column .bs-posts.bs-post-block---default{
+    padding-bottom: 50px;
+  }
+}
+@include media-breakpoint-up(xl){
+  .bs-section--news-and-press-past-events {
+    padding-top: 103px;
+    .bs-column .bs-posts.bs-post-block---default{
+      padding-bottom: 85px;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+.bs-section--solutions-how-commercial {
+  @include common-fingerprint-bg;
+  overflow: hidden;
+  padding: 50px 0;
+  h3 {
+    margin-bottom: 15px;
+    color: var(--pure-white);
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    color: var(--pure-white);
+  }
+  .bs-row--background-image {
+    z-index: $z-index-one;
+    display: none;
+    top: -44.3%;
+    left: 66.4%;
+    .bs-column {
+      padding: 0;
+    }
+    .bs-common-image {
+      figure {
+        img {
+          height: 700px;
+        }
+      }
+    }
+  }
+  .bs-column {
+    &:first-of-type {
+      padding-bottom: 20px;
+    }
+  }
+  .media-elements {
+    picture {
+      height: 300px;
+      img {
+        @include image-fill(cover);
+        border-radius: 5px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(sm) {
+  .bs-section--solutions-how-commercial {
+    .media-elements {
+      picture {
+        height: 312px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .bs-section--solutions-how-commercial {
+    .media-elements {
+      picture {
+        height: 450px;
+      }
+      .common-video-popup {
+        a {
+          &::after,
+          i {
+            bottom: 40px;
+          }
+          i {
+            left: 40px;
+            transform: unset;
+          }
+          &::after {
+            left: 86px;
+            font-size: $paragraph-font-size;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--solutions-how-commercial {
+    .bs-row--background-image {
+      display: block;
+    }
+    padding: 100px 0;
+    h2 {
+      margin: 0;
+    }
+    p {
+      margin: 24px 0 30px;
+    }
+    .media-elements {
+      picture {
+        height: 365px;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(xl) {
+  .bs-section--solutions-how-commercial {
+    .bs-column {
+      &:first-of-type {
+        z-index: $z-index-two;
+        padding: 20px 15px 0 45px;
+      }
+      &:nth-of-type(2) {
+        padding-right: 30px;
+      }
+    }
+    .bs-row--background-image {
+      .bs-column {
+        padding: 0 15px;
+      }
+    }
+    .media-elements {
+      picture {
+        height: 400px;
+      }
+    }
+  }
+}
+
+//BE Styles
+.bs-section--solutions-how-commercial {
+  div[data-type="e25m/media-elements"] {
+    .media-elements {
+      .bs-common-image,
+      .common-video-popup {
+        picture {
+          //overwrite default style
+          height: 100% !important;
+          img {
+            //overwrite default style
+            object-fit: cover !important;
+          }
+        }
+      }
+    }
+  }
+}

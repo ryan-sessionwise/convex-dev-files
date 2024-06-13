@@ -1,0 +1,14 @@
+.bs-pro-button--btn-primary-link-arrow{
+	&.bs-pro-button{
+		a.bs-pro-button__container{
+			@extend %btn-primary-link-arrow;
+			&:hover,
+			&:focus,
+			&:active,
+			&:not(:disabled):not(.disabled):active,
+			&:not(:disabled):not(.disabled):active:focus {
+				opacity: .7;
+			}
+		}
+	}
+}

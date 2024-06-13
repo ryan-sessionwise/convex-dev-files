@@ -1,0 +1,17 @@
+.bs-section--solution-title-content {
+  padding-top: 5px;
+  h2 {
+    margin-bottom: 20px;
+    font-weight: $font-weight-medium;
+  }
+  p {
+    line-height: 1.2;
+    font-size: 20px;
+    color: var(--catalina-blue);
+  }
+}
+@include media-breakpoint-up(lg) {
+  .bs-section--solution-title-content {
+    padding-top: 31px;
+  }
+}

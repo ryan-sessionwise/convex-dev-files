@@ -1,0 +1,31 @@
+@mixin blockquote {
+  blockquote {
+    @include common-gradient(to left, #ffbb00, var(--orange-red));
+    position: relative;
+    margin: 30px 0;
+    padding-top: 26px;
+    background-repeat: no-repeat;
+    background-size: 100% 3px;
+    &::before {
+      @include after-before;
+      @include sprite-quote-icon-blue;
+      top: 30px;
+    }
+    p {
+      padding-left: 14px;
+      line-height: 1.25;
+      color: var(--catalina-blue);
+    }
+  }
+  .bs-div--testimonial-author {
+    padding-bottom: 0;
+  }
+  @include media-breakpoint-up(lg) {
+    blockquote {
+      margin: 49px 0 35px;
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}

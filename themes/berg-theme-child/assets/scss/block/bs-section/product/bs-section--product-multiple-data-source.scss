@@ -1,0 +1,176 @@
+.bs-section--product-multiple-data-source {
+  padding: 30px 0 30px;
+  .bs-column--product-multiple-data-source {
+    display: block;
+    margin-bottom: 25px;
+  }
+  .bs-tab-slider {
+    .bs-column--product-multiple-data-source {
+      display: none;
+      h2 {
+        margin-bottom: 25px;
+        color: var(--black-pearl);
+      }
+      p {
+        line-height: 1.5;
+        color: var(--catalina-blue);
+      }
+    }
+    .bs-slider-tabs {
+      .slick-track {
+        .slick-slide {
+          z-index: $z-index-one;
+          padding: 0 50px;
+        }
+      }
+    }
+    .slick-next {
+      z-index: $z-index-two;
+      margin-top: -10px;
+      margin-right: 20px;
+    }
+    .slick-prev {
+      z-index: $z-index-two;
+      margin-top: -10px;
+      margin-left: 20px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bs-section--product-multiple-data-source {
+    padding: 100px 0 90px;
+    &.bs-section--product-multiple-right {
+      .bs-tab-slider {
+        flex-direction: row-reverse;
+      }
+    }
+    &.bs-section--product-multiple-left {
+      padding: 0 0;
+      .bs-tab-slider {
+        .bs-slider-content {
+          .slick-list {
+            @include blue-vector-round;
+          }
+          .media-elements {
+            .bs-common-image {
+              .figure {
+                justify-content: flex-end !important; // overiding default flex align
+                img {
+                  width: 100%;
+                  max-width: 620px;
+                  margin-top: 50px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bs-column--product-multiple-data-source {
+      display: none;
+      margin-bottom: 0;
+    }
+    .bs-tab-slider {
+      display: flex;
+      justify-content: space-between;
+      .bs-column--product-multiple-data-source {
+        display: block;
+        padding: 0;
+        h2 {
+          margin-bottom: 25px;
+        }
+        p {
+          line-height: 1.5;
+        }
+      }
+      .bs-slider-tabs {
+        width: 35%;
+        .slick-track {
+          display: flex;
+          flex-direction: column;
+          width: 100% !important;
+          margin-top: 33px;
+          transform: translate3d(0px, 0px, 0px) !important; // overriding inline css
+          .slick-slide {
+            width: auto !important; // overriding inline css
+            padding: 0;
+            .slick-slide-wrapper {
+              @include border-radius(4px);
+              width: auto !important; // overriding inline css
+              margin: 1px 0 10px 1px;
+              padding: 10px 20px;
+              font-size: $h6-font-size;
+              color: var(--shuttle-grey);
+              // box-shadow: 0 0 0 0.5px var(--catalina-blue-shadow);
+              border: 0.5px solid var(--catalina-blue-shadow);
+              cursor: pointer;
+              p {
+                margin-bottom: 0;
+              }
+            }
+            &:hover {
+              .slick-slide-wrapper {
+                background-color: var(--cerulean);
+                color: var(--pure-white);
+              }
+            }
+            &.slick-current {
+              .slick-slide-wrapper {
+                @include box-shadows(0, 2px, 10px, 0, var(--light-blue-shadow));
+                border: 1px solid var(--cerulean);
+                border-radius: 4px;
+                background-color: var(--cerulean);
+                color: var(--pure-white);
+              }
+            }
+          }
+        }
+      }
+      .bs-slider-content {
+        width: 60%;
+        .slick-list {
+          @include orange-vector-round;
+        }
+        img {
+          width: 100%;
+          max-width: 570px;
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bs-section--product-multiple-data-source {
+    .bs-tab-slider {
+      column-gap: 130px;
+      .bs-slider-tabs {
+        width: 370px;
+      }
+      .bs-slider-content {
+        width: 670px;
+      }
+    }
+  }
+}
+
+// BE styles
+div[data-type="e25m/section"] {
+  .bs-section--product-multiple-data-source {
+    margin-top: 30px;
+    .bs-column--product-multiple-data-source {
+      display: block !important;
+    }
+    .bs-tab-slider {
+      column-gap: 10px;
+      .bs-slider-tabs {
+        width: 300px !important;
+      }
+      .bs-slider-content {
+        width: 400px !important;
+      }
+    }
+  }
+}

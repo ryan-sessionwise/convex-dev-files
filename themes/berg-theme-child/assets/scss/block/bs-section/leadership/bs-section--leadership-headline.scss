@@ -1,0 +1,40 @@
+.bs-section--leadership-headline{
+  @include common-fingerprint-bg;
+  h1{
+    @include heading2;
+    margin: 0;
+    padding: 40px 0 20px;
+    font-family: $font-avenir-bold;
+    color: var(--black-pearl);
+  }
+  p{
+    @include heading5;
+    margin: 0;
+    padding-bottom: 50px;
+    line-height: normal;
+    font-family: $font-avenir-regular;
+    color: var(--catalina-blue);
+  }
+}
+
+@include media-breakpoint-up(md){
+  .bs-section--leadership-headline{
+    h1{
+      padding: 75px 0 20px;
+    }
+    p{
+      padding-bottom: 75px;
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .bs-section--leadership-headline{
+    h1{
+      padding: 105px 0 20px;
+    }
+    p{
+      padding-bottom: 100px;
+      line-height: normal;
+    }
+  }
+}

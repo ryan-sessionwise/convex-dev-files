@@ -1,0 +1,26 @@
+//Default Styles
+
+//Theme Default
+
+@import "../../../theme-defaults.scss";
+
+//Common Styles
+
+.bs-post {
+  background-repeat: no-repeat;
+  background-size: cover;
+  .bs-single-post {
+    &__trigger {
+      &:hover {
+        text-decoration: none !important;
+      }
+    }
+    &__learn-more {
+      &--link {
+        &:hover {
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
+}

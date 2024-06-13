@@ -1,0 +1,110 @@
+.bs-section--why-convex-blurb-section{
+  @include common-fingerprint-bg;
+  padding: 0 0 15px;
+  .bs-row--background-image{
+    z-index: $z-index-zero;
+    opacity: 0.1;
+    top: -36px;
+    left: 68%;
+    height: 81%;
+  }
+  .container{
+    position: relative;
+  }
+  h2{
+    margin: 0;
+    padding: 50px 0 35px;
+    color: var(--pure-white);
+  }
+  .bs-blurb{
+    $this: ".bs-blurb";
+    padding-bottom: 30px;
+    #{$this}__image{
+      padding-bottom: 19px;
+      figure{
+        width: 34px;
+        height: 34px;
+        margin: 0;
+        img{
+          @include image-fill(scale-down);
+        }
+      }
+    }
+    #{$this}__title{
+      padding-bottom: 13px;
+      h3{
+        @include heading4;
+        margin: 0;
+        line-height: 1.15;
+        font-family: $font-avenir-demi;
+        color: var(--pure-white);
+      }
+    }
+    #{$this}__description{
+      padding-bottom: 31px;
+      p{
+        margin: 0;
+        font-size: $paragraph-font-size-mobile;
+        line-height: 18px;
+        color: var(--pure-white);
+        opacity: .75;
+      }
+    }
+    #{$this}__read-more{
+      span{
+        @extend %btn-primary-link-arrow-small;
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md){
+  .bs-section--why-convex-blurb-section{
+    padding: 0 0 30px;
+    h2{
+      padding: 75px 0 50px;
+    }
+    .bs-column--custom-flex{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 35px;
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .bs-section--why-convex-blurb-section{
+    padding: 0 0 62px;
+    h2{
+      padding: 104px 0 76px;
+    }
+    .bs-column--custom-flex{
+      column-gap: 50px;
+    }
+  }
+}
+@include media-breakpoint-up(xl){
+  .bs-section--why-convex-blurb-section{
+    .bs-column--custom-flex{
+      column-gap: 135px;
+    }
+  }
+}
+// BE styles
+div[data-type="e25m/section"]{
+  .bs-section--why-convex-blurb-section{
+    padding: 15px;
+    .block-editor-inner-blocks{
+      width: 100%;
+    }
+    .bs-column--custom-flex{
+      display: flex !important;
+    }
+    div[data-type="e25m/blurb"]{
+      display: inline-block;
+      width: 33.33%;
+      vertical-align: top;
+    }
+    .bs-blurb{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.bs-section--why-convex-card-section{
+  padding: 50px 0 20px;
+  h2{
+    margin: 0;
+    padding-bottom: 35px;
+    font-family:$font-avenir-medium;
+    color: var(--black-pearl);
+  }
+  .bs-card{
+    $this: ".bs-card";
+    padding-bottom: 30px;
+    #{$this}__image{
+      padding-bottom: 17px;
+      figure{
+        width: 34px;
+        height: 34px;
+        margin: 0;
+        img{
+          @include image-fill(contain, left);
+        }
+      }
+    }
+    #{$this}__title{
+      padding-bottom: 15px;
+      h3{
+        @include heading4;
+        margin: 0;
+        line-height: 30px;
+        color: var(--black-pearl);
+      }
+    }
+    #{$this}__description{
+      p{
+        margin: 0;
+        font-size: $paragraph-font-size-mobile;
+        line-height: 18px;
+        color: var(--catalina-blue);
+      }
+    }
+  }
+}
+@include media-breakpoint-up(md){
+  .bs-section--why-convex-card-section{
+    padding: 75px 0 20px;
+    h2{
+      padding-bottom: 56px;
+    }
+    .bs-column--custom-flex{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 35px;
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .bs-section--why-convex-card-section{
+    padding: 106px 0 77px;
+    h2{
+      padding-bottom: 76px;
+    }
+    .bs-column--custom-flex{
+      column-gap: 50px;
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .bs-section--why-convex-card-section{
+    .bs-column--custom-flex{
+      column-gap: 135px;
+    }
+  }
+}
+// BE styles
+div[data-type="e25m/section"]{
+  .bs-section--why-convex-card-section{
+    padding: 15px;
+    .block-editor-inner-blocks{
+      width: 100%;
+    }
+    .bs-column--custom-flex{
+      display: flex !important;
+    }
+    div[data-type="e25m/card"]{
+      display: inline-block;
+      width: 33.33%;
+      vertical-align: top;
+    }
+    .bs-card{
+      width: 100%;
+      figure{
+        height: 34px !important;
+      }
+    }
+  }
+}

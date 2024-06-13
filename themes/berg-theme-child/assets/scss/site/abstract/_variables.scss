@@ -1,0 +1,96 @@
+/******************
+    COLOR PALETTE
+ ******************/
+$colors: (
+  /*---------------------------       ----------------
+    COLOR VALUES FOR CODING             SET VALUES
+  -----------------------------       ---------------*/
+    /*  var(--pure-white)             */ --pure-white: #ffffff,
+  /*  var(--pure-black)               */ --pure-black: #000000,
+  /*  var(--midnight)                 */ --midnight: #1e2835,
+  /*  var(--catalina-blue)            */ --catalina-blue: #2a3e55,
+  /*  var(--cerulean)                 */ --cerulean: #0062a9,
+  /*  var(--lighter-blue)             */ --lighter-blue: #12c0f2,
+  /*  var(--black-pearl)              */ --black-pearl: #031322,
+  /*  var(--shuttle-grey)             */ --shuttle-grey: #596678,
+  /*  var(--swiss-coffee)             */ --swiss-coffee: #e0cfc8,
+  /*  var(--very-light-blue)          */ --very-light-blue: #e6e8eb,
+  /*  var(--alice-blue)               */ --alice-blue: #eaf6ff,
+  /*  var(--orange-red)               */ --orange-red: #ff4500,
+  /*  var(--orange-red-dark)          */ --orange-red-dark: #e23d00,
+  /*  var(--blue-light)               */ --blue-light: #c1d9ea,
+  /*  var(--shaddow-black)            */ --shaddow-black: rgba(3, 19, 34, 0.46),
+  /*  var(--shaddow-black-hover)      */ --shaddow-black-hover: rgba(3, 19, 34, 0.2),
+  /*  var(--vivid-orange)             */ --vivid-orange: #ffbb00,
+  /*  var(--shuttle-grey-transparent)  */ --shuttle-grey-transparent: rgba(89, 102, 120, 0.07),
+  /*  var(--overlay-black)            */ --overlay-black: rgba(3, 19, 34, 0.15),
+  /*  var(--overlay-light-blue)       */ --overlay-light-blue: rgba(234, 246, 255, 0),
+  /*  var(--light-blue-shadow)        */ --light-blue-shadow: rgba(0, 98, 169, 0.3),
+  /*  var(--peacock-blue-transarent)  */ --peacock-blue-transparent: rgba(0, 98, 169, 0.12),
+  /*  var(--box-shadow)               */ --box-shadow: rgba(3, 19, 34, 0.431),
+  /*  var(--cool-gray)                */ --cool-gray: #acb3bc,
+  /*  var(--dark-indigo-8)         */ --dark-indigo-8: rgba(20, 22, 84, 0.08),
+  /*  var(--peacock-blue-12)         */ --peacock-blue-12: rgba(0, 98, 169, 0.12),
+  /*var(--light-grayish-blue) */ --light-grayish-blue: rgba(226, 229, 232, 255),
+  /* var(--catalina-blue-shadow)*/ --catalina-blue-shadow: rgba(42, 62, 85, 0.5)
+);
+//Font Family
+$font-avenir-regular: "Avenir Next LT Pro Regular";
+$font-avenir-demi: "Avenir Next LT Pro Demi";
+$font-avenir-medium: "Avenir Next LT Pro Medium";
+$font-avenir-bold: "Avenir Next LT Pro Bold";
+
+// Font Weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+
+// Font Sizes
+$h1-font-size: 60px;
+$h2-font-size: 40px;
+$h3-font-size: 30px;
+$h4-font-size: 26px;
+$h5-font-size: 20px;
+$h6-font-size: 16px;
+$paragraph-font-size: 16px;
+$paragraph-font-size-mobile: 14px;
+$list-font-size: 14px;
+$paragraph-sub-text: 12px;
+$blockquote-font-size: 34px;
+
+// Font Sizes - Mobile view
+$h1-mobile-font-size: 30px;
+$h2-mobile-font-size: 28px;
+$h3-mobile-font-size: 21px;
+$h4-mobile-font-size: 20px;
+$h5-mobile-font-size: 18px;
+$h6-mobile-font-size: 15px;
+$mobile-paragraph-font-size: 14px;
+
+// Z-INDEX
+$z-index-minus-two: -2;
+$z-index-minus-one: -1;
+$z-index-zero: 0;
+$z-index-one: 1;
+$z-index-two: 2;
+$z-index-header: 999;
+
+// gradient
+$gradient-blue: linear-gradient(250deg, var(--cerulean), var(--catalina-blue));
+$gradient-blue-with-slope: linear-gradient(262deg, var(--cerulean), var(--catalina-blue));
+
+$image-base-path: "../images/";
+$icon-sprite: "#{$image-base-path}icon-sprite-v2.4.svg";
+$menu-bg: "#{$image-base-path}menu-bg.svg";
+$linked-in: "#{$image-base-path}linked-in.svg";
+$blockquote-bg: "#{$image-base-path}blockquote-bg.png";
+$orange-vector: "#{$image-base-path}orange-vector.png";
+$blue-vector: "#{$image-base-path}blue-vector.png";
+$about-testimonial-mask: "#{$image-base-path}about-testimonial-mask.png";
+$icon-facebook: "#{$image-base-path}icon-facebook.png";
+$icon-linkedin: "#{$image-base-path}icon-linkedin.png";
+$icon-mail: "#{$image-base-path}icon-mail.png";
+$icon-twitter: "#{$image-base-path}icon-twitter.png";
+$icon-share: "#{$image-base-path}icon-share.png";
+$search-result-bg: "#{$image-base-path}search-result-bg.png";
+$left-arrow: "#{$image-base-path}arrow-left.svg";
+$right-arrow: "#{$image-base-path}arrow-right.svg";

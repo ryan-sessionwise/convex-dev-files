@@ -1,0 +1,36 @@
+[data-type="search"] {
+  .facetwp-input-wrap {
+    position: relative;
+    &::before {
+      @include after-before;
+      @include sprite-search-icon-big;
+      width: 22px;
+      height: 20px;
+      left: 7px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    width: 100%;
+    .facetwp-icon {
+      display: none;
+    }
+    .facetwp-search {
+      width: 100%;
+      padding: 15px 10px 12px 40px;
+      border: none;
+      background-color: transparent;
+      color: var(--catalina-blue);
+      border-bottom: 1px solid var(--very-light-blue);
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  [data-type="search"] {
+    .facetwp-input-wrap {
+      &::before {
+        left: -2px;
+      }
+    }
+  }
+}

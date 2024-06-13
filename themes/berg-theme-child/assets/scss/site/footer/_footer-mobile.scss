@@ -1,0 +1,212 @@
+footer {
+  padding: 30px 0;
+  background-image: linear-gradient(to top, rgba(3, 19, 34, 0), rgba(3, 19, 34, 0.06));
+  .footer__wrapper {
+    display: grid;
+    width: 100%;
+    grid-template-columns: minmax(150px, 220px) auto;
+    grid-template-rows: 76px auto auto;
+    grid-template-areas:
+      "footer-logo footer-logo"
+      "footer-menus footer-menus"
+      "footer-bottom footer-bottom"
+      "footer-social footer-social";
+    .footer-logo {
+      display: block;
+      width: 145px;
+      height: 50px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .footer-nav {
+      > li {
+        > a {
+          margin-bottom: 20px;
+          font-family: $font-avenir-medium;
+          color: var(--black-pearl);
+          transition: color 0.3s;
+        }
+        &.menu-item-has-children {
+          position: relative;
+          padding-bottom: 14px;
+          li {
+            margin-bottom: 10px;
+            a {
+              line-height: 16px;
+            }
+            &.current-menu-item{
+              a{
+                color: var(--cerulean);
+              }
+            }
+          }
+          a {
+            margin-bottom: 7px;
+            font-size: 13px;
+            color: var(--catalina-blue);
+            letter-spacing: -0.25px;
+            &:hover {
+              color: var(--cerulean);
+            }
+          }
+          > a {
+            font-family: $font-avenir-demi;
+          }
+        }
+        &.current-menu-item{
+          > a{
+            color: var(--orange-red);
+          }
+        }
+        &.heading {
+          > a {
+            color: var(--black-pearl);
+            font-family: $font-avenir-medium;
+            font-size: $h6-font-size;
+          }
+          li {
+            a {
+              color: var(--catalina-blue);
+            }
+          }
+        }
+        &.current-menu-ancestor{
+          > a{
+            color: var(--orange-red);
+          }
+        }
+      }
+      &.footer-nav-direct {
+        > li {
+          > a {
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .menu-item-has-children {
+        > a {
+          display: block;
+          font-size: 16px;
+        }
+      }
+      .current-menu-item {
+        a {
+          opacity: 1;
+          pointer-events: none;
+        }
+      }
+      .sub-menu-wrapper {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.4s ease-in-out;
+      }
+      .dropdown {
+        &::before,
+        &::after {
+          @include after-before;
+          z-index: $z-index-minus-one;
+          top: 3px;
+          right: 20px;
+          background-color: var(--catalina-blue);
+          transition: transform 0.3s;
+        }
+        &::before {
+          right: 24px;
+          width: 2px;
+          height: 10px;
+        }
+        &::after {
+          top: 7px;
+          width: 10px;
+          height: 2px;
+        }
+      }
+      .expand {
+        .dropdown {
+          &::before,
+          &::after {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+    .footer-social {
+      display: flex;
+      margin-top: 10px;
+      .social-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 18px;
+        transition: filter 0.2s;
+        &:hover {
+          filter: invert(21%) sepia(74%) saturate(2385%) hue-rotate(188deg) brightness(100%) contrast(101%);
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
+        }
+      }
+    }
+    .footer-bottom {
+      p,
+      a {
+        font-size: 13px;
+        line-height: 13px;
+        color: var(--catalina-blue);
+        letter-spacing: -0.25px;
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+        li {
+          margin: 0 0 5px;
+          border-right: 1px solid var(--catalina-blue);
+          &:last-of-type {
+            border-right: none;
+          }
+          a {
+            padding: 0 10px;
+            transition: color 0.3s;
+            &:hover {
+              color: var(--cerulean);
+            }
+          }
+          &.current-menu-item{
+            > a{
+              color: var(--cerulean);
+            }
+          }
+        }
+      }
+    }
+    .footer-menus {
+      display: flex;
+      flex-wrap: wrap;
+      > div {
+        width: 50%;
+        &:first-of-type {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Grid template areas
+.footer-logo {
+  grid-area: footer-logo;
+}
+.footer-menus {
+  grid-area: footer-menus;
+}
+.footer-social {
+  grid-area: footer-social;
+}
+.footer-bottom {
+  grid-area: footer-bottom;
+}

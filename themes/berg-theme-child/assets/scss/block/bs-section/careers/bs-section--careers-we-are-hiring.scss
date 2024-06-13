@@ -1,0 +1,35 @@
+.bs-section--careers-we-are-hiring{
+  padding: 55px 0 48px;
+  background-image: $gradient-blue-with-slope;
+  h2{
+    margin: 0;
+    padding-bottom: 10px;
+    font-family: $font-avenir-demi;
+    color: var(--blue-light);
+  }
+  p{
+    margin: 0;
+    font-size: $h5-font-size;
+    line-height: normal;
+    color: var(--pure-white);
+  }
+  .bs-column--column-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 3px;
+  }
+}
+@include media-breakpoint-down(sm){
+  .bs-section--careers-we-are-hiring{
+    h2,
+    p{
+      padding-bottom: 20px;
+      text-align: center;
+    }
+    .bs-column--column-right{
+      align-items: center;
+    }
+  }
+}

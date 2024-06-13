@@ -1,0 +1,24 @@
+section.bs-section--product-banner-type-one{
+  h1,
+  h5,
+  p{
+    color: var(--pure-white);
+  }
+  p{
+    padding-bottom: 19px;
+  }
+}
+@include media-breakpoint-only(xl){
+  section.bs-section--product-banner-type-one{
+    .media-elements{
+      height: 480px;
+    }
+    .bs-column--column-left{
+      padding-right: 60px;
+      padding-top: 4px;
+    }
+    .bs-column--column-right{
+      padding: 85px 0 11px 15px;
+    }
+  }
+}

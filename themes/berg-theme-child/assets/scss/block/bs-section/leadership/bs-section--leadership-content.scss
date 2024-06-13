@@ -1,0 +1,210 @@
+.bs-section--leadership-content{
+  padding: 20px 0 10px;
+  .bs-posts{
+    $self: ".bs-posts";
+    padding-bottom: 0 !important; //overwrite default styles
+    #{ $self }__normal-title{
+      margin: 0;
+      padding: 0 0 30px;
+      h3{
+        margin: 0;
+        margin: 0;
+        font-family: $font-avenir-demi;
+        text-align: left;
+        @include heading4;
+      }
+    }
+    &__normal-row{
+      justify-content: center;
+    }
+    .bs-post{
+      $this: ".bs-post";
+      margin-bottom: 20px;
+      .wp-block-social-links {
+        display: none;
+      }
+      &__container{
+        height: 100%;
+        border-bottom: solid 1px var(--very-light-blue);
+      }
+      &__image{
+        overflow: hidden;
+        border-radius: 5px;
+        .figure{
+          margin: 0;
+          img{
+            width: 100%;
+            height: 100%;
+            transition: .3s ease-in-out;
+            object-fit: cover;
+          }
+        }
+      }
+      &__details{
+        position: relative;
+      }
+      &__title{
+        padding: 15px 25px 1px 0;
+        h5{
+          @include heading5;
+          margin: 0;
+          font-family: $font-avenir-demi;
+          color: var(--black-pearl);
+        }
+      }
+      &__meta_leadership_designation{
+        padding: 0 30px 10px 0;
+        span{
+          font-size: $paragraph-font-size-mobile;
+          line-height: normal;
+          font-family: $font-avenir-regular;
+          color: var(--catalina-blue);
+          text-transform: uppercase;
+        }
+      }
+      &__learn-more{
+        display: none;
+      }
+      &:hover{
+        #{ $this }__details{
+          &::after{
+            opacity: 0.7;
+          }
+        }
+        #{ $this }__image{
+          .figure{
+            img{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(xs){
+  .bs-section--leadership-content{  
+    .bs-posts{
+      .bs-post{
+        max-width: 310px;
+        &__image{
+          figure.figure{
+            width: 100%;
+            height: 240px;
+            img{
+              object-position: center;
+            }
+          }
+        }
+      }
+    }    
+  }
+}
+@include media-breakpoint-only(sm){
+  .bs-section--leadership-content{   
+    .bs-posts{
+      .bs-post{
+        &__image{
+          .figure{
+            width: 240px;
+            height: 240px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  .bs-section--leadership-content{
+    .bs-posts{
+      .bs-post{
+        &__details{
+          &::after{
+            top: 29px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(md){
+  .bs-section--leadership-content{
+    padding: 30px 0 20px;
+    .bs-posts{
+      .bs-post{
+        margin-bottom: 30px;
+        &__normal-title{
+          padding: 0 0 40px;
+        }
+        &__image{
+          .figure{
+            width: 209px;
+            height: 209px;
+          }
+        }
+        &__title{
+          padding: 20px 25px 1px 0;
+        }
+        &__meta_leadership_designation{
+          padding: 0 30px 17px 0;
+        }
+        &__details{
+          &::after{
+            top: 34px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(lg){
+  .bs-section--leadership-content{
+    .bs-posts {
+      .bs-post{
+        &__image{
+          .figure{
+            width: 210px;
+            height: 210px;
+          }
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-up(lg){
+  .bs-section--leadership-content{
+    padding: 50px 0 28px;
+    .bs-posts {
+      $self: ".bs-posts";
+      #{ $self }__normal-title{
+        padding: 0 0 49px;
+      }
+      .bs-post{
+        margin-bottom: 50px;
+        &__title{
+          padding: 32px 25px 1px 0;
+          h5{
+            line-height: normal;
+          }
+        }
+        &__meta_leadership_designation{
+          padding: 0 30px 27px 0;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-only(xl){
+  .bs-section--leadership-content{
+    .bs-posts {
+      .bs-post{
+        &__image{
+          .figure{
+            width: 270px;
+            height: 270px;
+          }
+        }
+      }
+    }
+  }
+}
